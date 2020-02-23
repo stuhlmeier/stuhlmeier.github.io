@@ -1,7 +1,7 @@
 const
     dw = document.getElementById("description-wrapper"),
-    na = document.getElementById("navbar-arrow"),
-    n = document.getElementById("navbar-top");
+    nw = document.getElementById("navbar-wrapper"),
+    na = document.getElementById("navbar-arrow");
 
 let navbarOpen = false;
 
@@ -11,11 +11,9 @@ function toggleNavbar() {
 
     try {
         if (!navbarOpen) {
-            na.classList.add("clicked");
-            n.classList.add("opened");
+            nw.classList.add("opened");
         } else {
-            na.classList.remove("clicked");
-            n.classList.remove("opened");
+            nw.classList.remove("opened");
         }
     } finally {
         navbarOpen = !navbarOpen;

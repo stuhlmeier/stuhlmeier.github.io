@@ -28,7 +28,7 @@
     transform: rotate(0deg);
 }
 
-#navbar-arrow.clicked img {
+#navbar-wrapper.opened #navbar-arrow img {
     transform: rotate(90deg);
 }
 
@@ -39,7 +39,7 @@
     transition: opacity 0.3s linear;
 }
 
-#navbar-top.opened {
+#navbar-wrapper.opened #navbar-top {
     opacity: 1;
     height: auto;
     visibility: visible;
