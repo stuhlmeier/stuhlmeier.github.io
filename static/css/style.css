@@ -1,7 +1,7 @@
 * {
     --navbar-margin: 40px;
     --navbar-padding: 10px;
-    --navbar-height: 14pt;
+    --navbar-height: 36px;
 
     font-family: sans-serif;
 }
@@ -22,9 +22,6 @@ h1 {
 
 h2 {
     font-size: 24pt;
-}
-
-.name-sub {
     color: gray;
     max-width: 750px;
 }
@@ -62,4 +59,21 @@ h2 {
 
     padding: var(--navbar-padding);
     border-radius: 5px;
+}
+
+#navbar .separator {
+    width: 1px;
+    height: 100%;
+    margin: 0 5px;
+    background-color: gray;
+    font-size: 36px;
+    display: inline-block;
+}
+
+#navbar a {
+    color: inherit;
+}
+
+#navbar i.material-icons {
+    font-size: 36px;
 }
