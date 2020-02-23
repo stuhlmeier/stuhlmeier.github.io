@@ -1,5 +1,5 @@
 :root {
-    --meter-height: 30px;
+    --meter-height: 24px;
 }
 
 .skills {
@@ -35,7 +35,7 @@
  * I don't want to rely on inline styling or scripting for this.
  */
 .meter {
-    --good-color: rgb(64, 187, 69);
+    --good-color: #40BB45;
     --ok-color: #FDD835;
     --bad-color: #CC4600;
 
