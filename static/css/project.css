@@ -25,6 +25,7 @@ ul.tag-list li {
     margin: 3px 3px 3px 0;
     background-color: rgb(244, 250, 255);
     border: 1px solid rgb(123, 202, 255);
+    cursor: default;
 }
 
 ul.tag-list li.warn {
