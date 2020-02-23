@@ -27,6 +27,12 @@ h1 {
     font-size: var(--head-font-size);
 }
 
+h1 a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
 h2 {
     font-size: var(--description-font-size);
     line-height: var(--description-line-height);
@@ -45,15 +51,24 @@ h2 {
 
 #navbar-wrapper {
     display: flex;
-    width: 100%;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 
-    cursor: pointer;
+    width: 100%;
+}
+
+#navbar-top-container {
+    width: 100%;
 }
 
 #navbar-arrow {
-    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+
+    height: calc(var(--description-line-height) * var(--description-font-size));
+    padding-right: 10px;
+
+    cursor: pointer;
 }
 
 #navbar-arrow img {
@@ -68,12 +83,43 @@ h2 {
     transform: rotate(90deg);
 }
 
+#navbar-top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-top {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+#navbar-top.opened {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+}
+
+#navbar-top * {
+    font-size: var(--description-font-size);
+    font-family: 'Bree Serif', sans-serif;
+}
+
+#navbar-top a {
+    color: black;
+    text-decoration: none;
+}
+
 #description-wrapper {
     position: relative;
     overflow: hidden;
     font-size: var(--description-font-size);
     width: 100%;
     height: calc(var(--description-font-size) * var(--description-line-height));
+
+    cursor: pointer;
 }
 
 #description-wrapper.animated h2 {
@@ -86,6 +132,10 @@ h2 {
     color: gray;
     max-width: 750px;
     user-select: none;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #description2 {
@@ -112,5 +162,14 @@ h2 {
     }
     to {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

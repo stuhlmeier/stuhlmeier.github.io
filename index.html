@@ -18,15 +18,23 @@
 
 <body>
     <div id="container">
-        <h1>stuhlmeier</h1>
+        <h1><a href="/">stuhlmeier</a></h1>
 
         <div id="navbar-wrapper">
             <div id="navbar-arrow">
                 <img src="/static/image/chevron.svg" width="32px" />
             </div>
-            <div id="description-wrapper" class="animated">
-                <h2 id="description2"></h2>
-                <h2 id="description1"></h2>
+            <div id="navbar-top-container">
+                <div id="description-wrapper" class="animated">
+                    <h2 id="description2"></h2>
+                    <h2 id="description1"></h2>
+                </div>
+                <nav id="navbar-top">
+                    <ul>
+                        <li><a href="/projects.html">projects</a></li>
+                        <li><a href="/lipsum.html">TODO</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <script>document.getElementById("description1").innerHTML = getInitialDescription();</script>
@@ -34,9 +42,11 @@
         <p>
             There's nothing here yet. Sorry!
         </p>
+
         <nav id="navbar-bottom">
             <a href="/"><i class="material-icons">home</i></a>
-            <a href="/projects.html"><i class="material-icons md-48">library_books</i></a>
+            <a href="/projects.html"><i class="material-icons md-48">code</i></a>
+            <a href="/lipsum.html"><i class="material-icons md-48">notes</i></a>
         </nav>
     </div>
 </body>
