@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/static/css/navbar-top.css">
     <link rel="stylesheet" href="/static/css/navbar-bottom.css">
 
+    <link rel="stylesheet" href="/static/css/project.css">
+
     <script defer src="/static/js/navbar.js"></script>
 </head>
 
@@ -40,7 +42,62 @@
         <hr />
 
         <main>
-            <p>There's nothing here yet. Sorry!</p>
+            <section class="project">
+                <h3><a href="https://github.com/stuhlmeier/kotlin-events">Kotlin events</a></h3>
+                <img class="icon" src="/static/image/kotlin.svg" />
+                <ul class="tag-list">
+                    <li>kotlin</li>
+                    <li>library</li>
+                </ul>
+                <p>
+                    <span class="brief"><code>kotlinx.events</code> is a simple event library for Kotlin</span>.
+                </p>
+            </section>
+            <section class="project">
+                <h3><a href="https://github.com/stuhlmeier/gdpr/">GDPR</a></h3>
+                <img class="icon" src="/static/image/asciidoctor.svg" />
+                <ul class="tag-list">
+                    <li>asciidoc</li>
+                    <li>text</li>
+                </ul>
+                <p>
+                    <span class="brief">A summary of the General Data Protection Regulation</span> (<em>Regulation (EU) 2016/679 of the European
+                        Parliament and of the Council of 27 April 2016</em>).
+                    Condenses the 90 pages of the GDPR into about 40 pages.
+                </p>
+            </section>
+            <section class="project">
+                <h3><a href="https://github.com/stuhlmeier/ringcode-js/">ringcode</a></h3>
+                <img class="icon" src="/static/image/js.svg" />
+                <ul class="tag-list">
+                    <li class="warn">experiment</li>
+                    <li>javascript</li>
+                    <li>cv</li>
+                    <li>library</li>
+                    <li>tool</li>
+                </ul>
+                <p>
+                    <span class="brief">A circular, color-based tag format for encoding bytes.</span>
+                    Consists of a generator written in JavaScript and a reader written with OpenCV's Emscripten
+                    bindings.
+                </p>
+            </section>
+            <section class="project">
+                <h3><a href="https://github.com/stuhlmeier/melange/">Melange</a></h3>
+                <img class="icon" src="/static/image/cpp.svg" />
+                <ul class="tag-list">
+                    <li class="warn">unreleased</li>
+                    <li>c++</li>
+                    <li>llvm</li>
+                    <li>clang</li>
+                    <li>library</li>
+                    <li>tool</li>
+                </ul>
+                <p>
+                    <span class="brief">A documentation generator for the Clang frontend.</span>
+                    Written using LLVM 9/10 LibTooling and generates HTML5 documentation using Mustache.
+                </p>
+            </section>
         </main>
 
         <footer>

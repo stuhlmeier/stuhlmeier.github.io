@@ -1,0 +1,41 @@
+.project {
+    overflow: auto;
+}
+
+.project .icon {
+    width: 48px;
+    height: auto;
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+
+ul.tag-list {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.tag-list li {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 3px;
+    font-family: var(--monospace-font);
+    font-size: 13px;
+    margin: 3px 3px 3px 0;
+    background-color: rgb(244, 250, 255);
+    border: 1px solid rgb(123, 202, 255);
+}
+
+ul.tag-list li.warn {
+    font-weight: bold;
+    color: red;
+}
+
+.project .brief {
+    font-weight: bold;
+}
+
+.project p:first-of-type {
+    margin-top: 0;
+}

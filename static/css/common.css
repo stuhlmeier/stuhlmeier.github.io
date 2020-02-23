@@ -10,9 +10,12 @@
     --head-font-size: 48pt;
 
     --content-font: 'Source Sans Pro', sans-serif;
+    --monospace-font: 'Fira Code', 'Cascadia Code', monospace;
 
     --description-font-size: 28pt;
     --description-line-height: 1.7;
+
+    --section-head-font-size: 22pt;
 
     --container-width: 1000px;
 
@@ -36,6 +39,10 @@ h1 {
 h2 {
     font-size: var(--description-font-size);
     line-height: var(--description-line-height);
+}
+
+h3 {
+    font-size: var(--section-head-font-size);
 }
 
 a {
