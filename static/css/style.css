@@ -3,6 +3,9 @@
     --navbar-padding: 10px;
     --navbar-height: 36px;
 
+    --description-font-size: 28pt;
+    --description-line-height: 1.7;
+
     font-family: sans-serif;
 }
 
@@ -21,13 +24,12 @@ h1 {
 }
 
 h2 {
-    font-size: 24pt;
-    color: gray;
-    max-width: 750px;
+    font-size: var(--description-font-size);
+    line-height: var(--description-line-height);
 }
 
 #container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 40px auto;
 
     box-sizing: border-box;
@@ -35,6 +37,38 @@ h2 {
     padding: 30px 60px;
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
+}
+
+#description-wrapper {
+    position: relative;
+    overflow: hidden;
+    font-size: var(--description-font-size);
+    height: calc(var(--description-font-size) * var(--description-line-height));
+}
+
+#description-wrapper.animated h2 {
+    animation: 0.4s ease-in-out 0.7s slideUp;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#description-wrapper h2 {
+    color: gray;
+    max-width: 750px;
+}
+
+#description2 {
+    position: absolute;
+    top: calc(-1 * var(--description-font-size) * var(--description-line-height));
+}
+
+@keyframes slideUp {
+    from {
+        translate: 0 0;
+    }
+    to {
+        translate: 0 calc(var(--description-font-size) * var(--description-line-height));
+    }
 }
 
 #navbar-wrapper {

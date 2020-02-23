@@ -11,13 +11,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/static/css/style.css">
 
-    <script src="/static/js/script.js"></script>
+    <script src="/static/js/data.js"></script>
+    <script defer src="/static/js/cycle.js"></script>
 </head>
 
 <body>
     <div id="container">
         <h1>stuhlmeier</h1>
-        <h2>software developer, hobby designer</h2>
+
+        <div id="description-wrapper" class="animated">
+            <h2 id="description2"></h2>
+            <h2 id="description1"></h2>
+        </div>
+        <script>document.getElementById("description1").innerHTML = getInitialDescription();</script>
+
         <p>
             There's nothing here yet. Sorry!
         </p>
