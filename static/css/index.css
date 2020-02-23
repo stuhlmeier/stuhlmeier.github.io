@@ -1,3 +1,7 @@
+:root {
+    --meter-height: 30px;
+}
+
 .skills {
     display: grid;
     grid-template-columns: 18pt 150px auto;
@@ -25,76 +29,125 @@
     color: gray;
 }
 
-meter {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-  background: #EEE;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
-  border-radius: 3px;
-}
-
-/* From https://codepen.io/matt-west/pen/bpzEy (MIT) */
-meter {
-    --border-radius: 5px;
+/*
+ * No meter tag because Chromium is broken:
+ * https://bugs.chromium.org/p/chromium/issues/detail?id=632510
+ * I don't want to rely on inline styling or scripting for this.
+ */
+.meter {
     --good-color: rgb(64, 187, 69);
     --ok-color: #FDD835;
     --bad-color: #CC4600;
 
-    /* Reset the default appearance */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
     width: 100%;
-    height: 30px;
+    height: var(--meter-height);
 
-    /* For Firefox */
-    background: #EEE;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
-    border-radius: var(--border-radius);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #EEEEEE;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
 }
 
-/* WebKit */
-meter::-webkit-meter-bar {
-    background: #EEE;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
-    border-radius: var(--border-radius);
+.meter > div {
+    height: inherit;
 }
 
-meter::-webkit-meter-optimum-value,
-meter::-webkit-meter-suboptimum-value,
-meter::-webkit-meter-even-less-good-value {
-    border-radius: var(--border-radius);
+.meter[data-value="5"] > div {
+    width: 100%;
+    background-color: var(--good-color);
 }
 
-meter::-webkit-meter-optimum-value {
-    background: var(--good-color);
+.meter[data-value="4.75"] > div {
+    width: calc(4.75 * 20%);
+    background-color: var(--good-color);
 }
 
-meter::-webkit-meter-suboptimum-value {
-    background: var(--ok-color);
+.meter[data-value="4.5"] > div {
+    width: calc(4.5 * 20%);
+    background-color: var(--good-color);
 }
 
-meter::-webkit-meter-even-less-good-value  {
-    background: var(--bad-color);
+.meter[data-value="4.25"] > div {
+    width: calc(4.25 * 20%);
+    background-color: var(--good-color);
 }
 
-
-/* Firefox */
-meter::-moz-meter-bar {
-    border-radius: var(--border-radius);
+.meter[data-value="4"] > div {
+    width: calc(4 * 20%);
+    background-color: var(--good-color);
 }
 
-meter:-moz-meter-optimum::-moz-meter-bar {
-    background: var(--good-color);
+.meter[data-value="3.75"] > div {
+    width: calc(3.75 * 20%);
+    background-color: var(--good-color);
 }
 
-meter:-moz-meter-sub-optimum::-moz-meter-bar {
-    background: var(--ok-color);
+.meter[data-value="3.5"] > div {
+    width: calc(3.5 * 20%);
+    background-color: var(--good-color);
 }
 
-meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-    background: var(--bad-color);
+.meter[data-value="3.25"] > div {
+    width: calc(3.25 * 20%);
+    background-color: var(--ok-color);
+}
+
+.meter[data-value="3"] > div {
+    width: calc(3 * 20%);
+    background-color: var(--ok-color);
+}
+
+.meter[data-value="2.75"] > div {
+    width: calc(2.75 * 20%);
+    background-color: var(--ok-color);
+}
+
+.meter[data-value="2.5"] > div {
+    width: calc(2.5 * 20%);
+    background-color: var(--ok-color);
+}
+
+.meter[data-value="2"] > div {
+    width: calc(2 * 20%);
+    background-color: var(--ok-color);
+}
+
+.meter[data-value="1.75"] > div {
+    width: calc(1.75 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="1.5"] > div {
+    width: calc(1.5 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="1.25"] > div {
+    width: calc(1.25 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="1"] > div {
+    width: calc(1 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="0.75"] > div {
+    width: calc(0.75 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="0.5"] > div {
+    width: calc(0.5 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="0.25"] > div {
+    width: calc(0.25 * 20%);
+    background-color: var(--bad-color);
+}
+
+.meter[data-value="0"] > div {
+    width: 0;
+    background-color: var(--bad-color);
 }
