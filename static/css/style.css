@@ -143,8 +143,30 @@ h2 {
     top: calc(-1 * var(--description-font-size) * var(--description-line-height));
 }
 
+#navbar-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navbar-bottom a {
+    margin: 0 1px;
+}
+
+#navbar-bottom img {
+    margin: 0 2px;
+}
+
 #navbar-bottom a {
     color: black;
+}
+
+.vseparator {
+    display: inline-block;
+    height: 24px;
+    width: 1px;
+    margin: 0 5px;
+    background-color: gray;
 }
 
 @keyframes slideUp {
