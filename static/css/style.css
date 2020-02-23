@@ -149,10 +149,10 @@ h2 {
 
 @keyframes slideUp {
     from {
-        translate: 0 0;
+        transform: translate(0, 0);
     }
     to {
-        translate: 0 calc(var(--description-font-size) * var(--description-line-height));
+        transform: translate(0, calc(var(--description-font-size) * var(--description-line-height)));
     }
 }
 
