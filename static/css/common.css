@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+    --navbar-margin: 40px;
+    --navbar-padding: 10px;
+    --navbar-height: 36px;
+
+    --head-font: 'Bree Serif', sans-serif;
+    --head-font-size: 48pt;
+
+    --content-font: 'Source Sans Pro', sans-serif;
+
+    --description-font-size: 28pt;
+    --description-line-height: 1.7;
+
+    --container-width: 1000px;
+
+    font-family: var(--content-font);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--head-font-size);
+}
+
+h2 {
+    font-size: var(--description-font-size);
+    line-height: var(--description-line-height);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
