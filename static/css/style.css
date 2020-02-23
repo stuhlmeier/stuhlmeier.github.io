@@ -3,8 +3,12 @@
     --navbar-padding: 10px;
     --navbar-height: 36px;
 
+    --head-font-size: 48pt;
+
     --description-font-size: 28pt;
     --description-line-height: 1.7;
+
+    --container-width: 1000px;
 
     font-family: sans-serif;
 }
@@ -20,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 48pt;
+    font-size: var(--head-font-size);
 }
 
 h2 {
@@ -29,7 +33,7 @@ h2 {
 }
 
 #container {
-    max-width: 1000px;
+    max-width: var(--container-width);
     margin: 40px auto;
 
     box-sizing: border-box;
