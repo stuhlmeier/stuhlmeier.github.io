@@ -221,6 +221,12 @@ h2 {
         visibility: visible;
     }
 
+    #navbar-bottom {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        justify-content: center;
+    }
+
     #navbar-bottom img {
         height: 32px;
     }
