@@ -25,6 +25,5 @@ const shuffle = [
 ];
 
 function getInitialDescription() {
-    console.log(shuffle);
     return shuffle[0];
 }

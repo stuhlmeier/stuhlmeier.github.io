@@ -43,10 +43,36 @@ h2 {
     border-right: 1px solid lightgray;
 }
 
+#navbar-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#navbar-arrow {
+    margin-right: 10px;
+}
+
+#navbar-arrow img {
+    transition: transform 0.2s ease;
+}
+
+#navbar-arrow img {
+    transform: rotate(0deg);
+}
+
+#navbar-arrow.clicked img {
+    transform: rotate(90deg);
+}
+
 #description-wrapper {
     position: relative;
     overflow: hidden;
     font-size: var(--description-font-size);
+    width: 100%;
     height: calc(var(--description-font-size) * var(--description-line-height));
 }
 
@@ -59,11 +85,16 @@ h2 {
 #description-wrapper h2 {
     color: gray;
     max-width: 750px;
+    user-select: none;
 }
 
 #description2 {
     position: absolute;
     top: calc(-1 * var(--description-font-size) * var(--description-line-height));
+}
+
+#navbar-bottom a {
+    color: black;
 }
 
 @keyframes slideUp {
@@ -75,43 +106,11 @@ h2 {
     }
 }
 
-#navbar-wrapper {
-    display: flex;
-
-    position: fixed;
-    left: var(--navbar-margin);
-    right: var(--navbar-margin);
-    bottom: var(--navbar-margin);
-}
-
-#navbar {
-    display: inline-block;
-
-    color: white;
-    background-color: black;
-    opacity: 80%;
-    margin: auto;
-
-    height: calc(2 * var(--navbar-padding) + var(--navbar-height));
-    box-sizing: border-box;
-
-    padding: var(--navbar-padding);
-    border-radius: 5px;
-}
-
-#navbar .separator {
-    width: 1px;
-    height: 100%;
-    margin: 0 5px;
-    background-color: gray;
-    font-size: 36px;
-    display: inline-block;
-}
-
-#navbar a {
-    color: inherit;
-}
-
-#navbar i.material-icons {
-    font-size: 36px;
+@keyframes rotate90 {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }

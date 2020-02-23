@@ -10,22 +10,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/static/css/style.css">
+
+    <script defer src="/static/js/navbar.js"></script>
 </head>
 
 <body>
     <div id="container">
         <h1>stuhlmeier</h1>
-        <h2>projects</h2>
+
+        <div id="navbar-wrapper">
+            <div id="navbar-arrow">
+                <img src="/static/image/chevron.svg" width="32px" />
+            </div>
+            <h2>projects</h2>
+        </div>
+
         <p>
             There's nothing here yet. Sorry!
         </p>
-        <div id="navbar-wrapper">
-            <nav id="navbar">
-                <a href="/" title="Home"><i class="material-icons">home</i></a>
-                <span class="separator"></span>
-                <a href="/projects.html" title="Projects"><i class="material-icons md-48">library_books</i></a>
-            </nav>
-        </div>
+        <nav id="navbar-bottom">
+            <a href="/" title="Home"><i class="material-icons">home</i></a>
+            <a href="/projects.html" title="Projects"><i class="material-icons md-48">library_books</i></a>
+        </nav>
     </div>
 </body>
 
