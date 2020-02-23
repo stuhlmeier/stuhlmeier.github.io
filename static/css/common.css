@@ -16,6 +16,7 @@
     --description-line-height: 1.7;
 
     --section-head-font-size: 22pt;
+    --subsection-head-font-size: 16pt;
 
     --container-width: 1000px;
 
@@ -43,6 +44,10 @@ h2 {
 
 h3 {
     font-size: var(--section-head-font-size);
+}
+
+h4 {
+    font-size: var(--subsection-head-font-size);
 }
 
 a {

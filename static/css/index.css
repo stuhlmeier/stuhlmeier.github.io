@@ -1,0 +1,100 @@
+.skills {
+    display: grid;
+    grid-template-columns: 18pt 150px auto;
+    max-width: 500px;
+    margin: 10px 0;
+    align-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    font-size: 14pt;
+}
+
+.skills > * {
+    margin: auto 0;
+}
+
+.skills img {
+    max-width: 18pt;
+    height: 18pt;
+    margin: auto;
+}
+
+.skills .qualifier {
+    font-style: italic;
+    font-size: 80%;
+    color: gray;
+}
+
+meter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+  background: #EEE;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+}
+
+/* From https://codepen.io/matt-west/pen/bpzEy (MIT) */
+meter {
+    --border-radius: 5px;
+    --good-color: rgb(64, 187, 69);
+    --ok-color: #FDD835;
+    --bad-color: #CC4600;
+
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    height: 30px;
+
+    /* For Firefox */
+    background: #EEE;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+    border-radius: var(--border-radius);
+}
+
+/* WebKit */
+meter::-webkit-meter-bar {
+    background: #EEE;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+    border-radius: var(--border-radius);
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+    border-radius: var(--border-radius);
+}
+
+meter::-webkit-meter-optimum-value {
+    background: var(--good-color);
+}
+
+meter::-webkit-meter-suboptimum-value {
+    background: var(--ok-color);
+}
+
+meter::-webkit-meter-even-less-good-value  {
+    background: var(--bad-color);
+}
+
+
+/* Firefox */
+meter::-moz-meter-bar {
+    border-radius: var(--border-radius);
+}
+
+meter:-moz-meter-optimum::-moz-meter-bar {
+    background: var(--good-color);
+}
+
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: var(--ok-color);
+}
+
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: var(--bad-color);
+}
