@@ -9,6 +9,12 @@
     border-right: 1px solid lightgray;
 }
 
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid gray;
+}
+
 @media screen and (max-width: 1000px) {
     #container {
         border: none;
