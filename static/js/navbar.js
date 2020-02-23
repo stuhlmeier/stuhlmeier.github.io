@@ -6,6 +6,9 @@ const
 let navbarOpen = false;
 
 function toggleNavbar() {
+    // Ignore clicks when the display isn't wide enough
+    if (window.matchMedia("(max-width: 768px)").matches) return;
+
     try {
         if (!navbarOpen) {
             na.classList.add("clicked");
