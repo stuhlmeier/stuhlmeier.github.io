@@ -3,7 +3,8 @@ const descriptions = Object.freeze([
     "web designer",
     "open-source lover",
     "Linux enthusiast",
-    "Kotlin expert",
+    "Kotlin veteran",
+    "power user",
 ]);
 
 function getRandom(array, count) {
