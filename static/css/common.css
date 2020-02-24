@@ -10,6 +10,7 @@
     --head-font-size: 48pt;
 
     --content-font: 'Source Sans Pro', sans-serif;
+    --content-font-size: 13pt;
     --monospace-font: 'Fira Code', 'Cascadia Code', monospace;
 
     --description-font-size: 28pt;
@@ -26,6 +27,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-size: var(--content-font-size);
 }
 
 h1, h2, h3, h4, h5, h6 {
