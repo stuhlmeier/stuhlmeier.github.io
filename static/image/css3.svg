@@ -1,23 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1"
-	 id="svg3476" inkscape:version="0.91 r13725" sodipodi:docname="CSS3.svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290.2 329.1"
-	 style="enable-background:new 0 0 290.2 329.1;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#264DE4;}
-	.st1{fill:#2965F1;}
-	.st2{fill:#EBEBEB;}
-	.st3{fill:#FFFFFF;}
-</style>
-<sodipodi:namedview  bordercolor="#666666" borderopacity="1.0" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" id="base" inkscape:current-layer="layer1" inkscape:cx="181.367" inkscape:cy="256" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="704" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="0" inkscape:window-y="27" inkscape:zoom="0.35" pagecolor="#ffffff" showgrid="false">
-	</sodipodi:namedview>
-<polygon id="polygon2989" class="st0" points="290.2,0 263.8,296.2 144.9,329.1 26.4,296.2 0,0 "/>
-<polygon id="polygon2991" class="st1" points="241.1,277.3 263.7,24.2 145.1,24.2 145.1,303.9 "/>
-<polygon id="polygon2993" class="st2" points="60.5,134.1 63.8,170.4 145.1,170.4 145.1,134.1 "/>
-<polygon id="polygon2995" class="st2" points="145.1,60.5 145,60.5 54,60.5 57.3,96.9 145.1,96.9 "/>
-<polygon id="polygon2997" class="st2" points="145.1,266.2 145.1,228.4 144.9,228.5 104.5,217.5 101.9,188.6 82.2,188.6 65.4,188.6
-	70.5,245.6 144.9,266.3 "/>
-<polygon id="polygon3005" class="st3" points="189.7,170.4 185.5,217.5 145,228.5 145,266.3 219.4,245.6 220,239.5 228.5,143.8
-	229.4,134.1 236,60.5 145,60.5 145,96.9 196.2,96.9 192.9,134.1 145,134.1 145,170.4 "/>
+<svg version="1.1" id="svg3476" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 290.2 329.1" xml:space="preserve">
+  <style>
+    .st2{fill:#ebebeb}
+  </style>
+  <path id="polygon2989" fill="#264de4" d="M290.2 0l-26.4 296.2-118.9 32.9-118.5-32.9L0 0z"/>
+  <path id="polygon2991" fill="#2965f1" d="M241.1 277.3l22.6-253.1H145.1v279.7z"/>
+  <path id="polygon2993" class="st2" d="M60.5 134.1l3.3 36.3h81.3v-36.3z"/>
+  <path id="polygon2995" class="st2" d="M145.1 60.5H54l3.3 36.4h87.8z"/>
+  <path id="polygon2997" class="st2" d="M145.1 266.2v-37.8l-.2.1-40.4-11-2.6-28.9H65.4l5.1 57 74.4 20.7z"/>
+  <path id="polygon3005" fill="#fff" d="M189.7 170.4l-4.2 47.1-40.5 11v37.8l74.4-20.7.6-6.1 8.5-95.7.9-9.7 6.6-73.6h-91v36.4h51.2l-3.3 37.2H145v36.3z"/>
 </svg>
