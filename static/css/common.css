@@ -57,3 +57,7 @@ a {
     color: inherit;
     font-family: inherit;
 }
+
+code {
+    font-family: var(--monospace-font);
+}

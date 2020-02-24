@@ -1,3 +1,7 @@
+:root {
+    --tag-font-size: 12pt;
+}
+
 .project {
     overflow: auto;
 }
@@ -21,7 +25,8 @@ ul.tag-list li {
     border-radius: 3px;
     padding: 3px;
     font-family: var(--monospace-font);
-    font-size: 13px;
+    font-size: var(--tag-font-size);
+    line-height: 1;
     margin: 3px 3px 3px 0;
     background-color: rgb(244, 250, 255);
     border: 1px solid rgb(123, 202, 255);
@@ -39,8 +44,12 @@ ul.tag-list li.info {
 
 ul.tag-list li img {
     float: left;
+    margin-right: 3px;
+    height: var(--tag-font-size);
+}
+
+ul.tag-list li img:last-of-type {
     margin-right: 0.5em;
-    height: var(--content-font-size);
 }
 
 .project .brief {
