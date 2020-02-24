@@ -4,8 +4,8 @@
 
 .skills {
     display: grid;
-    grid-template-columns: 18pt 150px auto;
-    max-width: 500px;
+    grid-template-columns: 18pt 1fr 2fr;
+    max-width: 550px;
     margin: 10px 0;
     align-content: center;
     grid-column-gap: 10px;
