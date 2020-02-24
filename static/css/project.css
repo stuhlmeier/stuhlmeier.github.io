@@ -33,6 +33,16 @@ ul.tag-list li.warn {
     color: red;
 }
 
+ul.tag-list li.info {
+    font-weight: bold;
+}
+
+ul.tag-list li img {
+    float: left;
+    margin-right: 0.5em;
+    height: 12pt;
+}
+
 .project .brief {
     font-weight: bold;
 }
