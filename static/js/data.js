@@ -2,9 +2,10 @@ const descriptions = Object.freeze([
     "software developer",
     "web designer",
     "open-source lover",
-    "Linux enthusiast",
+    "Linux aficionado",
     "Kotlin veteran",
     "power user",
+    "C++ enthusiast"
 ]);
 
 function getRandom(array, count) {
