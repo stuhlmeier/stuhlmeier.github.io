@@ -24,6 +24,10 @@
     font-family: var(--content-font);
 }
 
+i.material-icons {
+    user-select: none;
+}
+
 html, body {
     margin: 0;
     padding: 0;

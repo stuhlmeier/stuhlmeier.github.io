@@ -1,6 +1,31 @@
 :root {
-    --meter-height: 24px;
+    --meter-height: 20px;
     --skills-font-size: 14pt;
+}
+
+.view-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+}
+
+.view-switcher span:first-child {
+    margin-right: 10px;
+    color: gainsboro;
+    font-style: italic;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.view-switcher:hover span:first-child {
+    margin-right: 10px;
+    color: gray;
+    font-style: italic;
+}
+
+.view-switcher .button {
+    cursor: pointer;
 }
 
 .skills {
@@ -39,8 +64,16 @@
     border: 1px solid gainsboro;
     border-radius: 5px;
 
-    padding: 10px 10px calc(10px - var(--indicator-font-size)) 10px;
+    padding: 10px 10px 0 10px;
     box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition: border-color 0.2s linear;
+}
+
+.skills.grid .entry:hover {
+    border-color: dimgray;
 }
 
 .skills.grid .entry > .icon {
@@ -52,11 +85,13 @@
 
 .skills.grid .entry > .meter {
     height: 10px;
+    margin: 3px 0;
 }
 
 .skills.grid .entry > .indicator {
     font-size: var(--indicator-font-size);
     color: gray;
+    margin: 3px 0;
 }
 
 /* List format */
@@ -70,12 +105,9 @@
 }
 
 .skills.list .entry {
-    display: flex;
-    flex-direction: row;
-}
-
-.skills.list .entry > * {
-    margin: auto 0;
+    display: grid;
+    grid-template-columns: 18pt 1fr 3fr auto;
+    column-gap: 10px;
 }
 
 .skills.list .entry > .icon {
@@ -85,21 +117,9 @@
     margin: auto;
 }
 
-.skills.list .entry > .name {
-    margin-left: 10px;
-    width: calc(100% / 3);
-}
-
-.skills.list .entry > .meter {
-    margin-left: 10px;
-    width: calc(100% * 2 / 3);
-}
-
 .skills.list .entry > .indicator {
     font-size: var(--indicator-font-size);
     width: 3em;
-    margin-left: 5px;
-    overflow: visible;
     color: gray;
 }
 
