@@ -139,7 +139,7 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: #EEEEEE;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .meter > div {
