@@ -16,7 +16,7 @@
 
 .view-switcher span:first-child {
     margin-right: 10px;
-    color: gainsboro;
+    color: lightgray;
     font-style: italic;
     transition: color 0.2s ease;
     user-select: none;
@@ -30,6 +30,7 @@
 
 .view-switcher .button {
     cursor: pointer;
+    color: dimgray;
 }
 
 .skills {
