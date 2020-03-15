@@ -46,7 +46,7 @@
 
 /* Grid format (default) */
 .skills.grid {
-    --item-width: 165px;
+    --item-width: 160px;
     --item-height: 100px;
 
     --item-icon-size: 30pt;
@@ -96,7 +96,7 @@
 
 .skills.grid .entry > .meter {
     height: 10px;
-    margin: 3px 0;
+    margin-top: 3px;
 }
 
 .skills.grid .entry > .indicator {
@@ -117,7 +117,7 @@
 
 .skills.list .entry {
     display: grid;
-    grid-template-columns: 18pt 1fr 3fr auto;
+    grid-template-columns: 18pt 3fr 7fr auto;
     column-gap: 10px;
 }
 
