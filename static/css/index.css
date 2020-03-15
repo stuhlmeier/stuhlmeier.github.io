@@ -4,29 +4,102 @@
 }
 
 .skills {
-    display: grid;
-    grid-template-columns: 18pt 1fr 2fr;
-    max-width: 550px;
     margin: 10px 0;
-    align-content: center;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
     font-size: var(--skills-font-size);
 }
 
-.skills > * {
-    margin: auto 0;
+.skills .entry .qualifier {
+    font-style: italic;
+    font-size: 80%;
+    color: gray;
 }
 
-.skills img {
-    max-width: 18pt;
-    height: 18pt;
+/* Grid format (default) */
+.skills.grid {
+    --item-width: 160px;
+    --item-height: 100px;
+
+    --item-icon-size: 30pt;
+    --indicator-font-size: 10pt;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--item-width));
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.skills.grid .entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: var(--item-width);
+    min-height: var(--item-height);
+
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+
+    padding: 10px 10px calc(10px - var(--indicator-font-size)) 10px;
+    box-sizing: border-box;
+}
+
+.skills.grid .entry > .icon {
+    width: var(--item-icon-size);
+    height: var(--item-icon-size);
+    object-fit: contain;
     margin: auto;
 }
 
-.skills .qualifier {
-    font-style: italic;
-    font-size: 80%;
+.skills.grid .entry > .meter {
+    height: 10px;
+}
+
+.skills.grid .entry > .indicator {
+    font-size: var(--indicator-font-size);
+    color: gray;
+}
+
+/* List format */
+.skills.list {
+    --indicator-font-size: 10pt;
+
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    max-width: 550px;
+}
+
+.skills.list .entry {
+    display: flex;
+    flex-direction: row;
+}
+
+.skills.list .entry > * {
+    margin: auto 0;
+}
+
+.skills.list .entry > .icon {
+    width: 18pt;
+    height: 18pt;
+    object-fit: contain;
+    margin: auto;
+}
+
+.skills.list .entry > .name {
+    margin-left: 10px;
+    width: calc(100% / 3);
+}
+
+.skills.list .entry > .meter {
+    margin-left: 10px;
+    width: calc(100% * 2 / 3);
+}
+
+.skills.list .entry > .indicator {
+    font-size: var(--indicator-font-size);
+    width: 3em;
+    margin-left: 5px;
+    overflow: visible;
     color: gray;
 }
 
