@@ -3,7 +3,11 @@
     --skills-font-size: 14pt;
 }
 
-.view-switcher {
+.view-switcher.noscript {
+    display: none;
+}
+
+.view-switcher:not(.noscript) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -41,7 +45,7 @@
 
 /* Grid format (default) */
 .skills.grid {
-    --item-width: 160px;
+    --item-width: 165px;
     --item-height: 100px;
 
     --item-icon-size: 30pt;
