@@ -64,4 +64,5 @@ a {
 
 code {
     font-family: var(--monospace-font);
+    font-size: 11pt;
 }
