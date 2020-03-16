@@ -15,6 +15,17 @@ hr {
     border-top: 1px solid gray;
 }
 
+footer nav {
+    float: left;
+}
+
+footer p {
+    margin: 0;
+    float: right;
+    font-size: 10pt;
+    color: gray;
+}
+
 @media screen and (max-width: 1000px) {
     #container {
         border: none;
