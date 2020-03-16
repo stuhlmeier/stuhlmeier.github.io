@@ -1,114 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=480, maximum-scale=1.0">
-
-    <title>stuhlmeier</title>
-
-    <link rel="stylesheet" href="/static/css/common.css">
-    <link rel="stylesheet" href="/static/css/main.css">
-    <link rel="stylesheet" href="/static/css/navbar-top.css">
-    <link rel="stylesheet" href="/static/css/navbar-bottom.css">
-    <link rel="stylesheet" href="/static/css/index.css">
-
-    <script src="/static/js/data.js"></script>
-    <script defer src="/static/js/cycle.js"></script>
-    <script defer src="/static/js/navbar.js"></script>
-    <script defer src="/static/js/index.js"></script>
-</head>
-
-<body>
-    <div id="container">
-        <header>
-            <h1><a href="/">stuhlmeier</a></h1>
-
-            <div id="navbar-wrapper" class="opened">
-                <script>document.getElementById("navbar-wrapper").classList.remove("opened");</script>
-
-                <div id="navbar-arrow">
-                    <img src="/static/image/chevron.svg" width="32px" />
-                </div>
-                <div id="navbar-top-container">
-                    <div id="description-wrapper">
-                        <h2 id="description2"></h2>
-                        <h2 id="description1">software developer</h2>
-
-                        <script>
-                            document.getElementById("description1").innerHTML = getInitialDescription();
-                            document.getElementById("description-wrapper").classList.add("animated");
-                        </script>
-                    </div>
-                    <nav id="navbar-top">
-                        <ul>
-                            <li><a href="/projects.html">projects</a></li>
-                            <li><a href="/lipsum.html">TODO</a></li>
-                        </ul>
-                    </nav>
-                </div>
+<section>
+    <h3>What I do</h3>
+    <p>
+        I am a student who builds software in various fields, for various platforms, in their free time.
+        At the moment, my favorite technologies to use are Kotlin and C++ (with Meson, of course.)
+    </p>
+</section>
+<section>
+    <h3>My skills</h3>
+    {{#categories}}
+        <section>
+            <div class="view-switcher noscript">
+                <span>View mode:</span>
+                <i class="material-icons button">grid_on</i>
             </div>
-        </header>
-
-        <hr />
-
-        <main>
-            <section>
-                <h3>What I do</h3>
-                <p>
-                    I am a student who builds software in various fields, for various platforms, in their free time.
-                    At the moment, my favorite technologies to use are Kotlin and C++ (with Meson, of course.)
-                </p>
-            </section>
-            <section>
-                <h3>My skills</h3>
-                {{#categories}}
-                <section>
-                    <div class="view-switcher noscript">
-                        <span>View mode:</span>
-                        <i class="material-icons button">grid_on</i>
-                    </div>
-                    <h4>{{name}}</h4>
-                    <div class="skills list">
-                        {{#skills}}
-                        <div class="entry">
-                            <img class="icon" src="{{iconPath}}" />
-                            <span class="name">{{name}}{{#qualifier}} <span class="qualifier">{{qualifier}}</span>{{/qualifier}}</span>
-                            <div class="meter {{meterClasses}}" title="{{proficiency}}/5.0"><div style="{{meterStyle}}"></div></div>
-                            <span class="indicator">{{meterPercentage}}</span>
+            <h4>{{name}}</h4>
+            <div class="skills list">
+                {{#skills}}
+                    <div class="entry">
+                        <img class="icon" src="{{icon_path}}"/>
+                        <span class="name">{{name}}{{#qualifier}}
+                            <span class="qualifier">{{qualifier}}</span>{{/qualifier}}</span>
+                        <div class="meter {{meter_class}}" title="{{proficiency}}/5.0">
+                            <div style="{{{meter_style}}}"></div>
                         </div>
-                        {{/skills}}
+                        <span class="indicator">{{meter_percentage}}</span>
                     </div>
-                    <p>{{description}}</p>
-                </section>
-                {{/categories}}
-            </section>
-        </main>
+                {{/skills}}
+            </div>
+            <p>{{{description}}}</p>
+        </section>
+    {{/categories}}
+</section>
 
-        {{!The grid may become interactive, so the list view should be the noscript fallback.}}
-        <script>
-            for (const e of document.getElementsByClassName("noscript")) {
-                e.classList.remove("noscript");
-            }
+{{!The grid may become interactive, so the list view should be the noscript fallback.}}
+<script>
+    for (const e of document.getElementsByClassName("noscript")) {
+        e.classList.remove("noscript");
+    }
 
-            for (const e of document.getElementsByClassName("skills")) {
-                e.classList.remove("list");
-                e.classList.add("grid");
-            }
-        </script>
-
-        <footer>
-            <nav id="navbar-bottom">
-                <a href="/" title="Home"><i class="material-icons">home</i></a>
-                <a href="/projects.html" title="Projects"><i class="material-icons">code</i></a>
-                <a href="/lipsum.html" title="About"><i class="material-icons">notes</i></a>
-                <span class="vseparator"></span>
-                <a href="https://github.com/stuhlmeier/" title="GitHub"><img src="/static/image/logo/github.svg" /></a>
-                <a href="https://stackoverflow.com/users/7366707/" title="StackOverflow">
-                    <img src="/static/image/logo/stackoverflow.svg" /></a>
-            </nav>
-        </footer>
-    </div>
-</body>
-
-</html>
+    for (const e of document.getElementsByClassName("skills")) {
+        e.classList.remove("list");
+        e.classList.add("grid");
+    }
+</script>
