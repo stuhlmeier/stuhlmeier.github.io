@@ -5,28 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=480, maximum-scale=1.0">
 
-    <title>stuhlmeier/projects</title>
+    <title>stuhlmeier - projects</title>
 
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/navbar-top.css">
     <link rel="stylesheet" href="/static/css/navbar-bottom.css">
 
-    <link rel="stylesheet" href="/static/css/project.css">
-
+    <script src="/static/js/data.js"></script>
     <script defer src="/static/js/navbar.js"></script>
+
+    <link rel="stylesheet" href="/static/css/project.css">
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <h1><a href="/">stuhlmeier</a></h1>
+<div id="container">
+    <header>
+        <h1><a href="/">stuhlmeier</a></h1>
 
-            <div id="navbar-wrapper" class="opened">
-                <script>document.getElementById("navbar-wrapper").classList.remove("opened");</script>
+        <div id="navbar-wrapper" class="opened">
+            <script>document.getElementById("navbar-wrapper").classList.remove("opened");</script>
 
                 <div id="navbar-arrow">
-                    <img src="/static/image/chevron.svg" width="32px" />
+                    <img src="/static/image/chevron.svg" width="32px"/>
                 </div>
                 <div id="navbar-top-container">
                     <div id="description-wrapper">
@@ -34,114 +35,115 @@
                     </div>
                     <nav id="navbar-top">
                         <ul>
-                            <li><a href="/lipsum.html">TODO</a></li>
+                                <li><a href="/">home</a></li>
+                                <li><a href="/projects.html">projects</a></li>
                         </ul>
                     </nav>
                 </div>
-            </div>
-        </header>
+        </div>
+    </header>
 
-        <hr />
+    <hr/>
 
-        <main>
-            <section class="project">
-                <h3><a href="https://github.com/stuhlmeier/kotlin-events">Kotlin events</a></h3>
-                <img class="icon" src="/static/image/logo/kotlin.svg" />
-                <ul class="tag-list">
-                    <li class="info"
-                        title="MIT License">
-                        <img src="/static/image/logo/mit.svg" />
-                        mit
-                    </li>
-                    <li>kotlin</li>
-                    <li>library</li>
-                </ul>
-                <p>
-                    <span class="brief"><code>kotlinx.events</code> is a simple event library for Kotlin</span>.
-                </p>
-            </section>
-            <section class="project">
-                <h3><a href="https://github.com/stuhlmeier/gdpr/">GDPR</a></h3>
-                <img class="icon" src="/static/image/logo/asciidoctor.svg" />
-                <ul class="tag-list">
-                    <li class="info"
-                        title="CC BY-SA">
-                        <img src="/static/image/cc.svg" />
-                        <img src="/static/image/cc-by.svg" />
-                        <img src="/static/image/cc-sa.svg" />
-                        cc-by-sa
-                    </li>
-                    <li>asciidoc</li>
-                    <li>text</li>
-                </ul>
-                <p>
-                    <span class="brief">A summary of the General Data Protection Regulation</span> (<em>Regulation (EU)
-                        2016/679 of the European
-                        Parliament and of the Council of 27 April 2016</em>).
-                    Condenses the 90 pages of the GDPR into about 40 pages, with fully linked references and less
-                    legalese to sift through.
-                </p>
-            </section>
-            <section class="project">
-                <h3><a href="https://github.com/stuhlmeier/ringcode-js/">ringcode</a></h3>
-                <img class="icon" src="/static/image/logo/js.svg" />
-                <ul class="tag-list">
-                    <li class="info"
-                        title="GNU General Public License">
-                        <img src="/static/image/logo/gnu.svg" />
-                        gpl
-                    </li>
-                    <li class="warn" title="This project is not intended for production use.">experiment</li>
-                    <li>javascript</li>
-                    <li>cv</li>
-                    <li>library</li>
-                    <li>tool</li>
-                </ul>
-                <p>
-                    <span class="brief">A circular, color-based tag format for encoding bytes.</span>
-                    Consists of a generator and a reader written in JavaScript with the Canvas API and OpenCV's
-                    Emscripten bindings.
-                </p>
-            </section>
-            <section class="project">
-                <h3><a href="https://github.com/stuhlmeier/melange/">Melange</a></h3>
-                <img class="icon" src="/static/image/logo/cpp.svg" />
-                <ul class="tag-list">
-                    <li class="info"
-                        title="GNU General Public License">
-                        <img src="/static/image/logo/gnu.svg" />
-                        gpl
-                    </li>
-                    </li>
-                    <li class="warn"
-                        title="This project is in a very early stage of development and has not been made public.">
-                        unreleased
-                    </li>
-                    <li>c++</li>
-                    <li>llvm</li>
-                    <li>clang</li>
-                    <li>library</li>
-                    <li>tool</li>
-                </ul>
-                <p>
-                    <span class="brief">A documentation generator for the Clang frontend.</span>
-                    Written using LLVM 9/10 LibTooling and generates HTML5 documentation using Mustache.
-                </p>
-            </section>
-        </main>
+    <main>
+        <section class="project">
+    <h3><a href="https://github.com/stuhlmeier/kotlin-events">Kotlin events</a></h3>
+    <img class="icon" src="/static/image/logo/kotlin.svg"/>
+    <ul class="tag-list">
+        <li class="info"
+            title="MIT License">
+            <img src="/static/image/logo/mit.svg"/>
+            mit
+        </li>
+        <li>kotlin</li>
+        <li>library</li>
+    </ul>
+    <p>
+        <span class="brief"><code>kotlinx.events</code> is a simple event library for Kotlin</span>.
+    </p>
+</section>
+<section class="project">
+    <h3><a href="https://github.com/stuhlmeier/gdpr/">GDPR</a></h3>
+    <img class="icon" src="/static/image/logo/asciidoctor.svg"/>
+    <ul class="tag-list">
+        <li class="info"
+            title="CC BY-SA">
+            <img src="/static/image/cc.svg"/>
+            <img src="/static/image/cc-by.svg"/>
+            <img src="/static/image/cc-sa.svg"/>
+            cc-by-sa
+        </li>
+        <li>asciidoc</li>
+        <li>text</li>
+    </ul>
+    <p>
+        <span class="brief">A summary of the General Data Protection Regulation</span> (<em>Regulation (EU)
+        2016/679 of the European
+        Parliament and of the Council of 27 April 2016</em>).
+        Condenses the 90 pages of the GDPR into about 40 pages, with fully linked references and less
+        legalese to sift through.
+    </p>
+</section>
+<section class="project">
+    <h3><a href="https://github.com/stuhlmeier/ringcode-js/">ringcode</a></h3>
+    <img class="icon" src="/static/image/logo/js.svg"/>
+    <ul class="tag-list">
+        <li class="info"
+            title="GNU General Public License">
+            <img src="/static/image/logo/gnu.svg"/>
+            gpl
+        </li>
+        <li class="warn" title="This project is not intended for production use.">experiment</li>
+        <li>javascript</li>
+        <li>cv</li>
+        <li>library</li>
+        <li>tool</li>
+    </ul>
+    <p>
+        <span class="brief">A circular, color-based tag format for encoding bytes.</span>
+        Consists of a generator and a reader written in JavaScript with the Canvas API and OpenCV's
+        Emscripten bindings.
+    </p>
+</section>
+<section class="project">
+    <h3><a href="https://github.com/stuhlmeier/melange/">Melange</a></h3>
+    <img class="icon" src="/static/image/logo/cpp.svg"/>
+    <ul class="tag-list">
+        <li class="info"
+            title="GNU General Public License">
+            <img src="/static/image/logo/gnu.svg"/>
+            gpl
+        </li>
+        </li>
+        <li class="warn"
+            title="This project is in a very early stage of development and has not been made public.">
+            unreleased
+        </li>
+        <li>c++</li>
+        <li>llvm</li>
+        <li>clang</li>
+        <li>library</li>
+        <li>tool</li>
+    </ul>
+    <p>
+        <span class="brief">A documentation generator for the Clang frontend.</span>
+        Written using LLVM 9/10 LibTooling and generates HTML5 documentation using Mustache.
+    </p>
+</section>
 
-        <footer>
-            <nav id="navbar-bottom">
-                <a href="/" title="Home"><i class="material-icons">home</i></a>
-                <a href="/projects.html" title="Projects"><i class="material-icons">code</i></a>
-                <a href="/lipsum.html" title="About"><i class="material-icons">notes</i></a>
-                <span class="vseparator"></span>
-                <a href="https://github.com/stuhlmeier/" title="GitHub"><img src="/static/image/logo/github.svg" /></a>
-                <a href="https://stackoverflow.com/users/7366707/" title="StackOverflow">
-                    <img src="/static/image/logo/stackoverflow.svg" /></a>
-            </nav>
-        </footer>
-    </div>
+    </main>
+
+    <footer>
+        <nav id="navbar-bottom">
+            <a href="/" title="Home"><i class="material-icons">home</i></a>
+            <a href="/projects.html" title="Projects"><i class="material-icons">code</i></a>
+            <span class="vseparator"></span>
+            <a href="https://github.com/stuhlmeier/" title="GitHub"><img src="/static/image/logo/github.svg"/></a>
+            <a href="https://stackoverflow.com/users/7366707/" title="StackOverflow">
+                <img src="/static/image/logo/stackoverflow.svg"/></a>
+        </nav>
+    </footer>
+</div>
 </body>
 
 </html>
