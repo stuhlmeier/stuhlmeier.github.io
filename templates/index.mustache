@@ -34,11 +34,11 @@
 
 {{!The grid may become interactive, so the list view should be the noscript fallback.}}
 <script>
-    for (const e of document.getElementsByClassName("noscript")) {
+    for (const e of document.querySelectorAll(".noscript")) {
         e.classList.remove("noscript");
     }
 
-    for (const e of document.getElementsByClassName("skills")) {
+    for (const e of document.querySelectorAll(".skills")) {
         e.classList.remove("list");
         e.classList.add("grid");
     }
