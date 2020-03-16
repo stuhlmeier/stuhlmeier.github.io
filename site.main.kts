@@ -12,6 +12,9 @@ import java.io.StringReader
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardOpenOption
+import java.time.Instant
+import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
 
 val templateRoot = Path.of("templates")
 val outputRoot = Path.of("build")
@@ -62,8 +65,14 @@ val navbarItems = listOf(
     }
 )
 
+val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'at' HH:mm:ss.SSS O")
+val mixins = mapOf(
+    "navbar_items" to navbarItems,
+    "timestamp" to formatter.format(Instant.now().atZone(ZoneOffset.UTC))
+)
+
 render(
-    "base", INDEX_TEMPLATE + ("navbar_items" to navbarItems), "index", mapOf(
+    "base", INDEX_TEMPLATE + mixins, "index", mapOf(
         "main" to templateRoot.resolve("index.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/index.css">
@@ -74,7 +83,7 @@ render(
 )
 
 render(
-    "base", PROJECTS_TEMPLATE + ("navbar_items" to navbarItems), "projects", mapOf(
+    "base", PROJECTS_TEMPLATE + mixins, "projects", mapOf(
         "main" to templateRoot.resolve("projects.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/project.css">
