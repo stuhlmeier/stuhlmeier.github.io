@@ -1,0 +1,36 @@
+name: Render Mustache templates
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+      - name: Install dependencies
+        run: >-
+          python3 -m pip install --upgrade pip setuptools &&
+          python3 -m pip install -r requirements.txt
+      - name: Render templates
+        run: |-
+          mkdir build/
+          cp *.html build/
+          cp -r static/ build/
+          python3 ./generate.py
+      - name: Deploy to master
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: build/
+          COMMIT_MESSAGE: Deployed from develop

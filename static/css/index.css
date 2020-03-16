@@ -137,7 +137,6 @@
 /*
  * No meter tag because Chromium is broken:
  * https://bugs.chromium.org/p/chromium/issues/detail?id=632510
- * I don't want to rely on inline styling or scripting for this.
  */
 .meter {
     --good-color: #40BB45;
@@ -157,102 +156,14 @@
     height: inherit;
 }
 
-.meter[data-value="5"] > div {
-    width: 100%;
+.meter.meter-good > div {
     background-color: var(--good-color);
 }
 
-.meter[data-value="4.75"] > div {
-    width: calc(4.75 * 20%);
-    background-color: var(--good-color);
-}
-
-.meter[data-value="4.5"] > div {
-    width: calc(4.5 * 20%);
-    background-color: var(--good-color);
-}
-
-.meter[data-value="4.25"] > div {
-    width: calc(4.25 * 20%);
-    background-color: var(--good-color);
-}
-
-.meter[data-value="4"] > div {
-    width: calc(4 * 20%);
-    background-color: var(--good-color);
-}
-
-.meter[data-value="3.75"] > div {
-    width: calc(3.75 * 20%);
-    background-color: var(--good-color);
-}
-
-.meter[data-value="3.5"] > div {
-    width: calc(3.5 * 20%);
-    background-color: var(--good-color);
-}
-
-.meter[data-value="3.25"] > div {
-    width: calc(3.25 * 20%);
+.meter.meter-ok > div {
     background-color: var(--ok-color);
 }
 
-.meter[data-value="3"] > div {
-    width: calc(3 * 20%);
-    background-color: var(--ok-color);
-}
-
-.meter[data-value="2.75"] > div {
-    width: calc(2.75 * 20%);
-    background-color: var(--ok-color);
-}
-
-.meter[data-value="2.5"] > div {
-    width: calc(2.5 * 20%);
-    background-color: var(--ok-color);
-}
-
-.meter[data-value="2"] > div {
-    width: calc(2 * 20%);
-    background-color: var(--ok-color);
-}
-
-.meter[data-value="1.75"] > div {
-    width: calc(1.75 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="1.5"] > div {
-    width: calc(1.5 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="1.25"] > div {
-    width: calc(1.25 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="1"] > div {
-    width: calc(1 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="0.75"] > div {
-    width: calc(0.75 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="0.5"] > div {
-    width: calc(0.5 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="0.25"] > div {
-    width: calc(0.25 * 20%);
-    background-color: var(--bad-color);
-}
-
-.meter[data-value="0"] > div {
-    width: 0;
+.meter.meter-bad > div {
     background-color: var(--bad-color);
 }
