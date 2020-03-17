@@ -1,12 +1,14 @@
 @file:CompilerOptions("-jvm-target", "1.8")
 @file:DependsOn("org.jetbrains.kotlin:kotlin-reflect:1.3.70")
 @file:DependsOn("com.samskivert:jmustache:1.15")
+@file:DependsOn("com.googlecode.htmlcompressor:htmlcompressor:1.5.2")
 @file:Import(
     "templates/index.kts",
     "templates/projects.kts"
 )
 
 import com.samskivert.mustache.Mustache
+import com.googlecode.htmlcompressor.compressor.HtmlCompressor
 import java.io.File
 import java.io.StringReader
 import java.nio.file.Files
@@ -18,6 +20,10 @@ import java.time.format.DateTimeFormatter
 
 val templateRoot = Path.of("templates")
 val outputRoot = Path.of("build")
+
+val compressor = HtmlCompressor().apply {
+    setRemoveIntertagSpaces(true)
+}
 
 fun render(
     template: String,
@@ -45,7 +51,13 @@ fun render(
             }
         }
 
-    val output = compiler.compile(Files.newBufferedReader(templatePath)).execute(context)
+    val output =
+        compressor.compress(
+            compiler.compile(
+                Files.newBufferedReader(templatePath)
+            ).execute(context)
+        )
+
     Files.writeString(
         outputRoot.resolve("$outName.html"), output,
         StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
