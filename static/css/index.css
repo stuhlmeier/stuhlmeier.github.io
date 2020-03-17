@@ -36,6 +36,7 @@
 .skills {
     margin: 10px 0;
     font-size: var(--skills-font-size);
+    animation: fadeIn 0.3s ease;
 }
 
 .skills .entry .qualifier {
@@ -166,4 +167,13 @@
 
 .meter.meter-bad > div {
     background-color: var(--bad-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
