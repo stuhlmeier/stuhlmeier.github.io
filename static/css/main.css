@@ -9,6 +9,12 @@
     border-right: 1px solid lightgray;
 }
 
+#noscript-warning {
+    background-color: lemonchiffon;
+    margin: 10px 0;
+    padding: 15px;
+}
+
 hr {
     margin: 20px 0;
     border: none;
