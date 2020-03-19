@@ -5,7 +5,9 @@ data class Skill(
     private val _proficiency: Double,
     private val _name: String,
     private val _qualifier: String? = null,
-    private val _iconPath: String? = null
+    private val _iconPath: String? = null,
+
+    private val processor: (String) -> String = { it }
 ) {
     val proficiency get() = _proficiency
     val name get() = _name
@@ -26,11 +28,17 @@ data class Skill(
 data class SkillCategory(
     private val _name: String,
     private val _skills: List<Skill>,
-    private val _text: String = ""
+    private val _text: String = "",
+
+    private val processor: (String) -> String = { it }
 ) {
     val name get() = _name
     val skills get() = _skills
-    val description get() = _text
+    val description get() = processor(_text)
+
+    fun withProcessor(processor: (String) -> String): SkillCategory {
+        return copy(_skills = _skills.map { it.copy(processor = processor) }, processor = processor)
+    }
 }
 
 val INDEX_SKILL_CATEGORIES = listOf(
@@ -43,7 +51,7 @@ val INDEX_SKILL_CATEGORIES = listOf(
             Skill(3.50, "Maven", "3", "apache.svg")
         ),
         _text = """
-            I have most experience with the JVM ecosystem; Kotlin and Gradle are tools I use almost daily.
+I have most experience with the JVM ecosystem; Kotlin and Gradle are tools I use almost daily.
         """.trimIndent()
     ),
     SkillCategory(
@@ -55,10 +63,10 @@ val INDEX_SKILL_CATEGORIES = listOf(
             Skill(3.50, "Meson", _iconPath = "meson.png")
         ),
         _text = """
-            I have used C++ for a while, beginning with various competitive programming usages and moving on
-            to proper native development. While I primarily develop on Linux, I tend to prefer
-            <abbr title="or, at least, to the extent possible thanks to tooling and ABI incompatibilities &#x1F643;">cross-platform</abbr>
-            build tools such as CMake and Meson.
+I have used C++ for a while, beginning with various competitive programming usages and moving on
+to proper native development. While I primarily develop on Linux, I tend to prefer
+<abbr title="or, at least, to the extent possible thanks to tooling and ABI incompatibilities &#x1F643;">cross-platform</abbr>
+build tools such as CMake and Meson.
         """.trimIndent()
     ),
     SkillCategory(
@@ -67,7 +75,7 @@ val INDEX_SKILL_CATEGORIES = listOf(
             Skill(3.75, "ASP.NET", "Core 3", "net.svg")
         ),
         _text = """
-            There isn't much to say here; ASP.NET is simply the framework I have used the most.
+There isn't much to say here; ASP.NET is simply the framework I have used the most.
         """.trimIndent()
     ),
     SkillCategory(
@@ -83,14 +91,16 @@ val INDEX_SKILL_CATEGORIES = listOf(
             Skill(4.00, "TypeScript", "3", "ts.svg")
         ),
         _text = """
-            This site itself was written from scratch with JavaScript, CSS and Kotlin,
-            using Mustache as a templating engine.
+This site itself was written from scratch with JavaScript, CSS and Kotlin,
+using Mustache as a templating engine.
         """.trimIndent()
     )
 )
 
-val INDEX_TEMPLATE = mapOf(
-    "title" to null,
-    "index" to true,
-    "categories" to INDEX_SKILL_CATEGORIES
-)
+fun index(processor: (String) -> String): Map<String, Any?> {
+    return mapOf(
+        "title" to null,
+        "index" to true,
+        "categories" to INDEX_SKILL_CATEGORIES.map { it.withProcessor(processor) }
+    )
+}

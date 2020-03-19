@@ -1,7 +1,10 @@
 @file:CompilerOptions("-jvm-target", "1.8")
+
 @file:DependsOn("org.jetbrains.kotlin:kotlin-reflect:1.3.70")
 @file:DependsOn("com.samskivert:jmustache:1.15")
+@file:DependsOn("com.github.rjeschke:txtmark:0.13")
 @file:DependsOn("com.googlecode.htmlcompressor:htmlcompressor:1.5.2")
+
 @file:Import(
     "templates/index.kts",
     "templates/projects.kts"
@@ -9,6 +12,7 @@
 
 import com.samskivert.mustache.Mustache
 import com.googlecode.htmlcompressor.compressor.HtmlCompressor
+import com.github.rjeschke.txtmark.*
 import java.io.File
 import java.io.StringReader
 import java.nio.file.Files
@@ -25,6 +29,10 @@ val compressor = HtmlCompressor().apply {
     setRemoveIntertagSpaces(true)
 }
 
+val processor: (String) -> String = {
+    Processor.process(it, Configuration.DEFAULT)
+}
+
 fun render(
     template: String,
     context: Any,
@@ -32,6 +40,7 @@ fun render(
     templateMap: Map<String, Any> = emptyMap()
 ): String {
     println("Rendering template $template for $outName")
+
     val templatePath = templateRoot.resolve("$template.mustache")
     val compiler = Mustache.compiler()
         .withLoader { partial ->
@@ -84,7 +93,7 @@ val mixins = mapOf(
 )
 
 render(
-    "base", INDEX_TEMPLATE + mixins, "index", mapOf(
+    "base", index(processor) + mixins, "index", mapOf(
         "main" to templateRoot.resolve("index.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/index.css">
@@ -95,7 +104,7 @@ render(
 )
 
 render(
-    "base", PROJECTS_TEMPLATE + mixins, "projects", mapOf(
+    "base", projects(processor) + mixins, "projects", mapOf(
         "main" to templateRoot.resolve("projects.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/project.css">

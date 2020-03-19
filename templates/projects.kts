@@ -18,14 +18,16 @@ data class Project(
     private val _description: String?,
     private val _iconPath: String,
     private val _url: String? = null,
-    private val _tags: List<Tag>
+    private val _tags: List<Tag>,
+
+    private val processor: (String) -> String = { it }
 ) {
     val url get() = _url
     val name get() = _name
     val icon_path get() = Path.of("/static/image/logo/", _iconPath)
     val tags get() = _tags
     val brief get() = _brief
-    val description get() = _description
+    val description get() = _description?.let(processor)
 }
 
 val PROJECTS_TAG_MIT = Tag(
@@ -122,7 +124,9 @@ val PROJECTS_PROJECTS = listOf(
     )
 )
 
-val PROJECTS_TEMPLATE = mapOf(
-    "title" to "projects",
-    "projects" to PROJECTS_PROJECTS
-)
+fun projects(processor: (String) -> String): Map<String, Any?> {
+    return mapOf(
+        "title" to "projects",
+        "projects" to PROJECTS_PROJECTS.map { it.copy(processor = processor) }
+    )
+}
