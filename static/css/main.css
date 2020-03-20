@@ -21,6 +21,10 @@ hr {
     border-top: 1px solid gray;
 }
 
+main {
+    margin: 20px 0;
+}
+
 footer nav {
     float: left;
 }
