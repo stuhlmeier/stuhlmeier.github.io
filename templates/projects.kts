@@ -27,7 +27,11 @@ data class Project(
     val icon_path get() = Path.of("/static/image/logo/", _iconPath)
     val tags get() = _tags
     val brief get() = _brief
-    val description get() = _description?.let(processor)
+    val text
+        get() = processor(buildString {
+            _brief?.let { append("<span class=\"brief\">$it</span> ") }
+            _description?.let(::append)
+        })
 }
 
 val PROJECTS_TAG_MIT = Tag(
