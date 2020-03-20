@@ -72,7 +72,7 @@ I like to write just about anything for the JVM, especially cloud services and u
         ),
         _text = """
 I have used C++ for a while. I started in 2016 with competitive programming in mind,
-though I thankfully stayed away from the various infamous bad practices associated with said field
+though I thankfully stayed away from the various infamous bad practices associated with this field
 (I'm looking at you, `using namespace std` and `bits/stdc++.h`) and have since become quite experienced with
 modern C++ practices.
 
@@ -107,7 +107,11 @@ to be much more flexible and extensible, but I am still open to using other opti
         "Tools", listOf(
             Skill(4.75, "GNU Coreutils", _iconPath = "gnu.svg"),
             Skill(4.50, "Git")
-        )
+        ),
+        _text = """
+As I usually work on Arch Linux, I have had quite a while to become familiar with core POSIX utilities
+and other useful tools. I am relatively comfortable using Git for version control.
+        """.trimIndent()
     ),
     SkillCategory(
         "Other", listOf(
@@ -117,8 +121,8 @@ to be much more flexible and extensible, but I am still open to using other opti
             Skill(4.00, "TypeScript", "3", "ts.svg")
         ),
         _text = """
-This site itself was
-<a href="https://github.com/stuhlmeier/stuhlmeier.github.io">written from scratch with JavaScript, CSS and Kotlin</a>,
+Fun fact: This site itself was
+<a href="https://github.com/stuhlmeier/stuhlmeier.github.io">written from scratch with JavaScript and Kotlin</a>,
 using Kotlin scripts with Mustache and Markdown as a templating system.
         """.trimIndent()
     )
