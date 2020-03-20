@@ -15,7 +15,8 @@
 }
 
 .view-switcher span:first-child {
-    margin-right: 10px;
+    margin-right: 5px;
+    font-size: 11pt;
     color: lightgray;
     font-style: italic;
     transition: color 0.2s ease;
@@ -23,9 +24,7 @@
 }
 
 .view-switcher:hover span:first-child {
-    margin-right: 10px;
     color: gray;
-    font-style: italic;
 }
 
 .view-switcher .button {
