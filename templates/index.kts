@@ -51,7 +51,15 @@ val INDEX_SKILL_CATEGORIES = listOf(
             Skill(3.50, "Maven", "3", "apache.svg")
         ),
         _text = """
-I have most experience with the JVM ecosystem; Kotlin and Gradle are tools I use almost daily.
+Most of my programming experience has been made on the JVM.
+Kotlin and Gradle are tools I use on an almost-daily basis;
+in terms of tooling, the JVM ecosystem is the software environment I feel most comfortable developing for.
+
+I have been writing Java since 2014, shortly before the release of Java 8.
+I started primarily using Kotlin when it was first released as version 1.0 back in 2016,
+and have since familiarized myself with all aspects of the language.
+
+I like to write just about anything for the JVM, especially cloud services and user interfaces. 
         """.trimIndent()
     ),
     SkillCategory(
@@ -63,19 +71,36 @@ I have most experience with the JVM ecosystem; Kotlin and Gradle are tools I use
             Skill(3.50, "Meson", _iconPath = "meson.png")
         ),
         _text = """
-I have used C++ for a while, beginning with various competitive programming usages and moving on
-to proper native development. While I primarily develop on Linux, I tend to prefer
+I have used C++ for a while. I started in 2016 with competitive programming in mind,
+though I thankfully stayed away from the various infamous bad practices associated with said field
+(I'm looking at you, `using namespace std` and `bits/stdc++.h`) and have since become quite experienced with
+modern C++ practices.
+
+While I work on Linux as much as possible, I tend to prefer
 <abbr title="or, at least, to the extent possible thanks to tooling and ABI incompatibilities &#x1F643;">cross-platform</abbr>
-build tools such as CMake and Meson.
+build tools such as Meson and CMake.
+
+Additionally, I have written a few OpenGL applications from scratch for fun.
+
+I like to use C++ and Rust for systems programming and for writing low-level, high-performance tools.
+When writing C++, I prefer using Meson and Clang if they are available.
         """.trimIndent()
     ),
     SkillCategory(
         ".NET", listOf(
             Skill(5.00, "C#", "8", "cs.svg"),
+            Skill(4.25, "MonoGame", "3", "monogame.png"),
             Skill(3.75, "ASP.NET", "Core 3", "net.svg")
         ),
         _text = """
-There isn't much to say here; ASP.NET is simply the framework I have used the most.
+C# has become increasingly more appealing over the years, especially with the release of .NET Core
+and the solidification of the .NET Standard. While it was easy to start out with due to my prior Java knowledge,
+my work experience at a sizeable software company, in addition to my work on various personal projects,
+have enabled me to fully grasp proper C# idioms.
+
+I like to use C# to write cloud-based web applications (thanks, Azure) and, occasionally, video games.
+I usually prefer MonoGame over Unity and Godot as I find the <abbr title="bring your own engine">BYOE</abbr> approach
+to be much more flexible and extensible, but I am still open to using other options.
         """.trimIndent()
     ),
     SkillCategory(
@@ -91,8 +116,9 @@ There isn't much to say here; ASP.NET is simply the framework I have used the mo
             Skill(4.00, "TypeScript", "3", "ts.svg")
         ),
         _text = """
-This site itself was written from scratch with JavaScript, CSS and Kotlin,
-using Mustache as a templating engine.
+This site itself was
+<a href="https://github.com/stuhlmeier/stuhlmeier.github.io">written from scratch with JavaScript, CSS and Kotlin</a>,
+using Kotlin scripts with Mustache and Markdown as a templating system.
         """.trimIndent()
     )
 )

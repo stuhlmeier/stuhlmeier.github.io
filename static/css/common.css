@@ -43,6 +43,10 @@ h1 {
     font-size: var(--head-font-size);
 }
 
+h1 a {
+    color: initial;
+}
+
 h2 {
     font-size: var(--description-font-size);
     line-height: var(--description-line-height);
@@ -58,7 +62,7 @@ h4 {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #0074D9;
     font-family: inherit;
 }
 
