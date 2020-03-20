@@ -105,6 +105,7 @@ to be much more flexible and extensible, but I am still open to using other opti
     ),
     SkillCategory(
         "Tools", listOf(
+            Skill(4.75, "GNU Coreutils", _iconPath = "gnu.svg"),
             Skill(4.50, "Git")
         )
     ),
