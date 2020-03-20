@@ -8,6 +8,8 @@
 
 .project .icon {
     width: 48px;
+    max-height: 48px;
+    object-fit: contain;
     height: auto;
     float: left;
     margin: 3px 10px 0 0;
