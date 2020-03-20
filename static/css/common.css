@@ -66,6 +66,10 @@ a {
     font-family: inherit;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 code {
     font-family: var(--monospace-font);
     font-size: 11pt;
