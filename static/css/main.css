@@ -35,7 +35,7 @@ footer p {
 p code {
     display: inline-block;
     border-radius: 3px;
-    padding: 3px;
+    padding: 1px 3px;
     font-family: var(--monospace-font);
     background-color: aliceblue;
     border: 1px solid lightgray;
