@@ -83,7 +83,6 @@
 }
 
 .skills.grid .entry > .icon {
-    width: var(--item-icon-size);
     height: var(--item-icon-size);
     object-fit: contain;
     margin-bottom: 5px;

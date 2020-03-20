@@ -32,6 +32,16 @@ footer p {
     color: gray;
 }
 
+p code {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 3px;
+    font-family: var(--monospace-font);
+    background-color: aliceblue;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
 @media screen and (max-width: 1000px) {
     #container {
         border: none;
