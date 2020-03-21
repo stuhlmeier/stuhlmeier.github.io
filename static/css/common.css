@@ -29,12 +29,23 @@
     -ms-text-size-adjust: none;
 }
 
+code {
+    font-family: var(--monospace-font);
+    font-size: 11pt;
+}
+
 @media screen and (max-width: 1000px) {
     :root {
         --head-font-size: 52pt;
         --content-font-size: 16pt;
-        --section-head-font-size: 24pt;
-        --subsection-head-font-size: 18pt;
+        --description-font-size: 32pt;
+        --section-head-font-size: 28pt;
+        --subsection-head-font-size: 20pt;
+    }
+
+    code {
+        font-family: var(--monospace-font);
+        font-size: 12pt;
     }
 }
 
@@ -83,9 +94,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-code {
-    font-family: var(--monospace-font);
-    font-size: 11pt;
 }
