@@ -25,6 +25,18 @@ main {
     margin: 20px 0;
 }
 
+section {
+    margin: 16px 0;
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-top: 16px;
+}
+
 footer nav {
     float: left;
 }
