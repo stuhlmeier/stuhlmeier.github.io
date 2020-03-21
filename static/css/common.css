@@ -22,6 +22,8 @@
     --container-width: 1000px;
 
     font-family: var(--content-font);
+
+    -webkit-text-size-adjust: none;
 }
 
 i.material-icons {
@@ -59,11 +61,6 @@ h3 {
 
 h4 {
     font-size: var(--subsection-head-font-size);
-}
-
-th, td {
-    font-family: var(--content-font);
-    font-size: var(--content-font-size);
 }
 
 a {
