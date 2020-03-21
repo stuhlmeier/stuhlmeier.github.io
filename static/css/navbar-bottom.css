@@ -26,9 +26,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    #navbar-bottom {
+    footer {
         margin-top: 30px;
         margin-bottom: 60px;
+        align-items: center;
+    }
+
+    footer nav {
+        margin-bottom: 10px;
+    }
+
+    #navbar-bottom {
         justify-content: center;
     }
 
