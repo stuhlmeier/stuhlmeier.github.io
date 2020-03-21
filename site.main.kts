@@ -88,6 +88,10 @@ val navbarItems = listOf(
     object {
         val href = "/about.html"
         val title = "about"
+    },
+    object {
+        val href = "/static/resume.pdf"
+        val title = "résumé"
     }
 )
 
