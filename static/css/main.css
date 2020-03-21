@@ -55,6 +55,10 @@ footer p {
     color: gray;
 }
 
+footer nav a {
+    text-decoration: none !important;
+}
+
 footer nav a > * {
     display: block !important;
 }
