@@ -19,6 +19,8 @@
     --section-head-font-size: 22pt;
     --subsection-head-font-size: 16pt;
 
+    --head-margin: 10px;
+
     --container-width: 1000px;
 
     font-family: var(--content-font);
@@ -61,6 +63,10 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bree Serif', sans-serif;
+    margin: 0 0 var(--head-margin) 0;
+}
+
+h1, h2 {
     margin: 0;
 }
 
