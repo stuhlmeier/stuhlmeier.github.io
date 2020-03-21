@@ -7,7 +7,8 @@
 
 @file:Import(
     "templates/index.kts",
-    "templates/projects.kts"
+    "templates/projects.kts",
+    "templates/about.kts"
 )
 
 import com.samskivert.mustache.Mustache
@@ -83,6 +84,10 @@ val navbarItems = listOf(
     object {
         val href = "/projects.html"
         val title = "projects"
+    },
+    object {
+        val href = "/about.html"
+        val title = "about"
     }
 )
 
@@ -108,6 +113,15 @@ render(
         "main" to templateRoot.resolve("projects.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/project.css">
+        """.trimIndent()
+    )
+)
+
+render(
+    "base", about() + mixins, "about", mapOf(
+        "main" to templateRoot.resolve("about.mustache"),
+        "head" to """
+            <link rel="stylesheet" href="/static/css/about.css">
         """.trimIndent()
     )
 )

@@ -1,0 +1,17 @@
+table {
+    margin: 0;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 0 10px 0 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+sub {
+    color: darkgray;
+}
