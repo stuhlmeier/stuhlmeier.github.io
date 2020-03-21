@@ -25,8 +25,14 @@ main {
     margin: 20px 0;
 }
 
-section {
-    margin: 16px 0;
+section + section {
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+    section + section {
+        margin-top: 20px;
+    }
 }
 
 p {
@@ -67,6 +73,12 @@ p code {
     #container {
         border: none;
     }
+
+    footer p {
+        margin: 0;
+        font-size: 11pt;
+        color: gray;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -75,5 +87,11 @@ p code {
         padding: 0;
 
         border: none;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 13pt;
+        color: gray;
     }
 }

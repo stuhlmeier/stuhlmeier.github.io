@@ -3,6 +3,17 @@
     --skills-font-size: 14pt;
 }
 
+@media screen and (max-width: 1000px) {
+    :root {
+        --skills-font-size: 16pt;
+    }
+
+    code {
+        font-family: var(--monospace-font);
+        font-size: 12pt;
+    }
+}
+
 .view-switcher.noscript {
     display: none;
 }
@@ -16,7 +27,7 @@
 
 .view-switcher span:first-child {
     margin-right: 5px;
-    font-size: 11pt;
+    font-size: 80%;
     color: lightgray;
     font-style: italic;
     transition: color 0.2s ease;
@@ -38,6 +49,14 @@
     animation: fadeIn 0.3s ease;
 }
 
+@media screen and (max-width: 1000px) {
+    .skills {
+        margin: 10px 0 16px 0;
+        font-size: var(--skills-font-size);
+        animation: fadeIn 0.3s ease;
+    }
+}
+
 .skills .entry .qualifier {
     font-style: italic;
     font-size: 80%;
@@ -50,7 +69,7 @@
     --item-height: 100px;
 
     --item-icon-size: 30pt;
-    --indicator-font-size: 10pt;
+    --indicator-font-size: 80%;
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--item-width), 1fr));
@@ -107,7 +126,7 @@
 
 /* List format */
 .skills.list {
-    --indicator-font-size: 10pt;
+    --indicator-font-size: 80%;
 
     display: grid;
     grid-template-columns: auto;
@@ -119,6 +138,15 @@
     display: grid;
     grid-template-columns: 18pt 3fr 7fr auto;
     column-gap: 10px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .skills.list .entry {
+        display: grid;
+        grid-template-columns: 18pt 5fr 5fr auto;
+        column-gap: 10px;
+    }
 }
 
 .skills.list .entry > .icon {

@@ -22,6 +22,31 @@
     --container-width: 1000px;
 
     font-family: var(--content-font);
+
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+code {
+    font-family: var(--monospace-font);
+    font-size: 11pt;
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --head-font-size: 52pt;
+        --content-font-size: 16pt;
+        --description-font-size: 32pt;
+        --section-head-font-size: 28pt;
+        --subsection-head-font-size: 20pt;
+    }
+
+    code {
+        font-family: var(--monospace-font);
+        font-size: 12pt;
+    }
 }
 
 i.material-icons {
@@ -61,11 +86,6 @@ h4 {
     font-size: var(--subsection-head-font-size);
 }
 
-th, td {
-    font-family: var(--content-font);
-    font-size: var(--content-font-size);
-}
-
 a {
     text-decoration: none;
     color: #0074D9;
@@ -74,9 +94,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-code {
-    font-family: var(--monospace-font);
-    font-size: 11pt;
 }
