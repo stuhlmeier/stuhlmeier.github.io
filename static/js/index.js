@@ -1,4 +1,4 @@
-let gridOn;
+let gridOn = false;
 
 const switchers = document.querySelectorAll(".view-switcher .button");
 const views = document.querySelectorAll(".skills");
@@ -28,4 +28,10 @@ for (const switcher of document.querySelectorAll(".view-switcher .button")) {
     switcher.addEventListener("click", toggleViewMode);
 }
 
-setViewMode(true);
+// Default to list view on small displays
+// Keeping the branch for readability.
+if (window.matchMedia("(max-width: 768px)").matches) {
+    setViewMode(false);
+} else {
+    setViewMode(true);
+}
