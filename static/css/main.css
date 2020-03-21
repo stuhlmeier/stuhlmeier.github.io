@@ -37,13 +37,14 @@ p + p {
     margin-top: 16px;
 }
 
-footer nav {
-    float: left;
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 footer p {
     margin: 0;
-    float: right;
     font-size: 10pt;
     color: gray;
 }
