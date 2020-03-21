@@ -52,8 +52,6 @@
 @media screen and (max-width: 1000px) {
     .skills {
         margin: 10px 0 16px 0;
-        font-size: var(--skills-font-size);
-        animation: fadeIn 0.3s ease;
     }
 }
 
@@ -143,9 +141,7 @@
 
 @media screen and (max-width: 1000px) {
     .skills.list .entry {
-        display: grid;
-        grid-template-columns: 18pt 5fr 5fr auto;
-        column-gap: 10px;
+        grid-template-columns: 18pt 4fr 6fr auto;
     }
 }
 
