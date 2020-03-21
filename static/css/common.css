@@ -23,7 +23,19 @@
 
     font-family: var(--content-font);
 
+    text-size-adjust: none;
     -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --head-font-size: 52pt;
+        --content-font-size: 16pt;
+        --section-head-font-size: 24pt;
+        --subsection-head-font-size: 18pt;
+    }
 }
 
 i.material-icons {
