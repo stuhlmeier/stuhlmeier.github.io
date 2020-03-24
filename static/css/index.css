@@ -26,21 +26,23 @@
 }
 
 .view-switcher span:first-child {
+    color: var(--subtle-content-color);
+
     margin-right: 5px;
     font-size: 80%;
-    color: lightgray;
     font-style: italic;
     transition: color 0.2s ease;
     user-select: none;
 }
 
 .view-switcher:hover span:first-child {
-    color: gray;
+    color: var(--side-content-color);
 }
 
 .view-switcher .button {
+    color: var(--side-content-color);
+
     cursor: pointer;
-    color: dimgray;
 }
 
 .skills {
@@ -56,9 +58,10 @@
 }
 
 .skills .entry .qualifier {
+    color: var(--side-content-color);
+
     font-style: italic;
     font-size: 80%;
-    color: gray;
 }
 
 /* Grid format (default) */
@@ -76,6 +79,8 @@
 }
 
 .skills.grid .entry {
+    border: 1px solid var(--border-color);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +88,6 @@
 
     min-height: var(--item-height);
 
-    border: 1px solid gainsboro;
     border-radius: 5px;
 
     padding: 10px 10px 0 10px;
@@ -95,7 +99,7 @@
 }
 
 .skills.grid .entry:hover {
-    border-color: dimgray;
+    border-color: var(--focus-border-color);
 }
 
 .skills.grid .entry > .icon {
@@ -117,8 +121,9 @@
 }
 
 .skills.grid .entry > .indicator {
+    color: var(--side-content-color);
     font-size: var(--indicator-font-size);
-    color: gray;
+
     margin: 3px 0;
 }
 
@@ -153,9 +158,10 @@
 }
 
 .skills.list .entry > .indicator {
+    color: var(--side-content-color);
     font-size: var(--indicator-font-size);
+
     width: 3em;
-    color: gray;
 }
 
 /*

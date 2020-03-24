@@ -1,0 +1,12 @@
+:root.theme-light {
+    --main-content-color: black;
+    --side-content-color: gray;
+    --subtle-content-color: lightgray;
+
+    --background-color: white;
+
+    --focus-border-color: dimgray;
+    --border-color: gainsboro;
+
+    --link-color: #0074D9;
+}

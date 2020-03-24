@@ -71,7 +71,7 @@ h1, h2 {
 }
 
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
-    color: initial;
+    color: var(--main-content-color);
     text-decoration: none !important;
 }
 
@@ -93,9 +93,9 @@ h4 {
 }
 
 a {
-    text-decoration: none;
-    color: #0074D9;
+    color: var(--link-color);
     font-family: inherit;
+    text-decoration: none;
 }
 
 a:hover {

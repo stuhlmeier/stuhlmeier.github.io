@@ -52,7 +52,7 @@ footer {
 footer p {
     margin: 0;
     font-size: 10pt;
-    color: gray;
+    color: var(--side-content-color);
 }
 
 footer nav a {
@@ -69,7 +69,7 @@ p code {
     padding: 1px 3px;
     font-family: var(--monospace-font);
     background-color: aliceblue;
-    border: 1px solid lightgray;
+    border: 1px solid var(--border-color);
     box-sizing: border-box;
 }
 
@@ -79,9 +79,7 @@ p code {
     }
 
     footer p {
-        margin: 0;
         font-size: 11pt;
-        color: gray;
     }
 }
 
@@ -94,8 +92,6 @@ p code {
     }
 
     footer p {
-        margin: 0;
         font-size: 13pt;
-        color: gray;
     }
 }
