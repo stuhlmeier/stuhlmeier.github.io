@@ -1,0 +1,27 @@
+:root.theme-dark {
+    --main-content-color: ghostwhite;
+    --side-content-color: lightgray;
+    --subtle-content-color: #8A8E94;
+
+    --block-background-color: rgb(26, 26, 26);
+    --alt-block-background-color: rgb(16, 16, 17);
+
+    --background-color: #292A2D;
+
+    --focus-border-color: darkgray;
+    --border-color: rgb(75, 75, 75);
+
+
+    --link-color: rgb(66, 167, 255);
+}
+
+:root.theme-dark .skills .meter {
+    background-color: transparent;
+    border: 1px solid rgb(73, 73, 78);
+    box-sizing: border-box;
+}
+
+:root.theme-dark ul.tag-list li.warn {
+    font-weight: bold;
+    color: rgb(247, 71, 71);
+}

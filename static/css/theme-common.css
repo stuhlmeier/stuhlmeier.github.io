@@ -23,12 +23,27 @@
 
     --container-width: 1000px;
 
+    --theme-transition: 0.6s ease;
+
     font-family: var(--content-font);
 
     text-size-adjust: none;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
+}
+
+body * {
+    transition: background-color var(--theme-transition),
+    color var(--theme-transition),
+    border-color var(--theme-transition);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--main-content-color);
+
+    transition: background-color var(--theme-transition);
 }
 
 code {
