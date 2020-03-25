@@ -10,11 +10,18 @@
 }
 
 #theme-switcher {
+    color: var(--subtle-content-color);
+
+    cursor: pointer;
+    transition: color 0.2s ease;
     display: block;
     float: right;
     font-size: 32pt;
     margin: 10px;
-    color: var(--subtle-content-color);
+}
+
+#theme-switcher:hover {
+    color: var(--side-content-color);
 }
 
 #noscript-warning {
