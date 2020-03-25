@@ -14,5 +14,5 @@ td {
 }
 
 sub {
-    color: darkgray;
+    color: var(--subtle-content-color);
 }

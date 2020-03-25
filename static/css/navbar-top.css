@@ -52,11 +52,11 @@
 }
 
 #navbar-top a {
-    color: black;
-    text-decoration: none;
-
-    font-size: var(--description-font-size);
+    color: var(--main-content-color);
     font-family: var(--head-font);
+    font-size: var(--description-font-size);
+
+    text-decoration: none;
 }
 
 #description-wrapper {
@@ -76,7 +76,8 @@
 }
 
 #description-wrapper h2 {
-    color: gray;
+    color: var(--side-content-color);
+
     max-width: 750px;
     user-select: none;
 

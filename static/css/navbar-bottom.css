@@ -14,7 +14,7 @@
 }
 
 #navbar-bottom a {
-    color: black;
+    color: var(--main-content-color);
 }
 
 .vseparator {
@@ -22,7 +22,7 @@
     height: 24px;
     width: 1px;
     margin: 0 5px;
-    background-color: gray;
+    background-color: var(--focus-border-color);
 }
 
 @media screen and (max-width: 768px) {

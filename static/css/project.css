@@ -30,8 +30,8 @@ ul.tag-list li {
     font-size: var(--tag-font-size);
     line-height: 1;
     margin: 3px 3px 3px 0;
-    background-color: rgb(244, 250, 255);
-    border: 1px solid rgb(123, 202, 255);
+    background-color: var(--alt-block-background-color);
+    border: 1px solid var(--focus-border-color);
     cursor: default;
 }
 
