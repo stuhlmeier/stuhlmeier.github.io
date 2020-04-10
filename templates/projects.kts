@@ -77,6 +77,22 @@ val PROJECTS_PROJECTS = listOf(
         )
     ),
     Project(
+        "memistry",
+        """
+            A chemistry trainer.
+        """.trimIndent(), """
+            Provides questions to aid learning or memorization.
+            Currently, it generates random questions concerning the periodic table and its elements.
+        """.trimIndent(),
+        "js.svg",
+        "https://stuhlmeier.github.io/memistry/",
+        _tags = listOf(
+            PROJECTS_TAG_GPL,
+            PROJECTS_TAG_JAVASCRIPT,
+            PROJECTS_TAG_TOOL
+        )
+    ),
+    Project(
         "GDPR",
         """
             A summary of the General Data Protection Regulation
