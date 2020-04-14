@@ -80,16 +80,17 @@ While I work on Linux as much as possible, I tend to prefer
 <abbr title="or, at least, to the extent possible thanks to tooling and ABI incompatibilities &#x1F643;">cross-platform</abbr>
 build tools such as Meson and CMake.
 
-Additionally, I have written a few OpenGL applications from scratch for fun.
+Additionally, I have written a few OpenGL applications from scratch as a learning experience.
 
 I like to use C++ and Rust for systems programming and for writing low-level, high-performance tools.
 When writing C++, I prefer using Meson and Clang if they are available.
+I generally prefer C++ over C due to the increased flexibility,
+but if I am writing an extensible application (or _really_ low-level code) C is really the only viable option.
         """.trimIndent()
     ),
     SkillCategory(
         ".NET", listOf(
             Skill(5.00, "C#", "8", "cs.svg"),
-            Skill(4.25, "MonoGame", "3", "monogame.png"),
             Skill(3.75, "ASP.NET", "Core 3", "net.svg")
         ),
         _text = """
@@ -98,9 +99,7 @@ and the solidification of the .NET Standard. While it was easy to start out with
 my work experience at a sizeable software company, in addition to my work on various personal projects,
 have enabled me to fully grasp proper C# idioms.
 
-I like to use C# to write cloud-based web applications (thanks, Azure) and, occasionally, video games.
-I usually prefer MonoGame over Unity and Godot as I find the <abbr title="bring your own engine">BYOE</abbr> approach
-to be much more flexible and extensible, but I am still open to using other options.
+I like to use C# to write cloud-based web applications (thanks, Azure).
         """.trimIndent()
     ),
     SkillCategory(
