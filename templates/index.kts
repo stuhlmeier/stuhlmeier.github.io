@@ -119,7 +119,7 @@ I like to use C# to write cloud-based web applications (thanks, Azure).
     SkillCategory(
         "Tools", listOf(
             Skill(4.75, "GNU Coreutils", _url = "https://www.gnu.org/software/coreutils/", _iconPath = "gnu.svg"),
-            Skill(4.75, "Linux", _url = "https://www.kernel.org/", _iconPath = "linux-tux.svg"),
+            Skill(4.75, "Linux", _iconPath = "linux-tux.svg"),
             Skill(4.75, "macOS", _url = "https://www.apple.com/macos/", _iconPath = "macos-finder.png"),
             Skill(4.75, "Windows", _url = "https://www.microsoft.com/windows", _iconPath = "windows.svg"),
             Skill(4.50, "Git", _url = "https://git-scm.com/"),
