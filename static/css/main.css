@@ -17,7 +17,8 @@
     display: block;
     float: right;
     font-size: 32pt;
-    margin: 10px;
+    margin: -20px;
+    padding: 30px;
 }
 
 #theme-switcher:hover {
