@@ -36,16 +36,9 @@
                 <h4>{{name}}</h4>
                 <div class="skills small">
                     {{#skills}}
-                        {{^is_phony}}
-                            <div class="entry" title="{{name}}: {{proficiency}}/5.0">
-                                <img class="icon" src="{{icon_path}}"/>
-                            </div>
-                        {{/is_phony}}
-                        {{#is_phony}}
-                            <div class="entry" title="{{name}}">
-                                <img class="icon" src="{{icon_path}}"/>
-                            </div>
-                        {{/is_phony}}
+                        <div class="entry" title="{{tooltip_text}}" data-tooltip="{{{rich_tooltip_text}}}">
+                            <img class="icon" src="{{icon_path}}"/>
+                        </div>
                     {{/skills}}
                 </div>
             {{/small}}

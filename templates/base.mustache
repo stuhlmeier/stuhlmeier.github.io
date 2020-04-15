@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/navbar-top.css">
     <link rel="stylesheet" href="/static/css/navbar-bottom.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css">
 
     <script src="/static/js/data.js"></script>
     <script defer src="/static/js/navbar.js"></script>
@@ -103,6 +104,27 @@
         <p class="subtle">All logos, wordmarks, and other trademarks used on this website are the property of their respective owners.</p>
     </footer>
 </div>
-</body>
 
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+<script>
+    if (tippy) {
+        for (const e of document.querySelectorAll(":not(abbr)[title]")) {
+            const title = e.getAttribute("title");
+            const rich = e.getAttribute("data-tooltip");
+            e.removeAttribute("title");
+
+            const tooltipContents = document.createElement("div");
+            tooltipContents.innerHTML = rich || title;
+
+            tippy(e, {
+                theme: "light-border",
+                content: tooltipContents
+            });
+        }
+    }
+</script>
+
+</body>
 </html>

@@ -6,6 +6,7 @@ data class Skill(
     private val _name: String,
     private val _qualifier: String? = null,
     private val _iconPath: String? = null,
+    private val _richTooltipText: String? = null,
 
     private val processor: (String) -> String = { it }
 ) {
@@ -25,6 +26,12 @@ data class Skill(
         }
 
     val meter_style get() = "width: ${meter_percentage}"
+
+    val tooltip_text get() =
+        if (is_phony) name
+        else "$name: $_proficiency/5.0"
+
+    val rich_tooltip_text get() = (_richTooltipText?.plus(": $_proficiency/5.0")) ?: tooltip_text
 }
 
 data class SkillCategory(
@@ -128,7 +135,10 @@ I like to use C# to write cloud-based web applications (thanks, Azure).
 
             Skill(Double.NaN, "LLVM, Clang", _iconPath = "llvm-head.png"),
 
-            Skill(4.50, "TeX (LaTeX, XeTeX)", _iconPath = "tex.svg"),
+            Skill(
+                4.50, "TeX (LaTeX, XeTeX)", _iconPath = "tex-bg.svg",
+                _richTooltipText = "<img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/tex.svg'/> (<img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/latex.svg'/>, <img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/xetex.svg'/>)"
+            ),
             Skill(Double.NaN, "Asciidoc, Asciidoctor", _iconPath = "asciidoctor.svg"),
             Skill(Double.NaN, "Microsoft Office", _iconPath = "office.svg"),
             Skill(4.00, "Adobe After Effects", _iconPath = "ae.svg"),
