@@ -12,24 +12,43 @@
     <h3>My skills</h3>
     {{#categories}}
         <section>
-            <div class="view-switcher noscript">
-                <span>View mode:</span>
-                <i class="material-icons button">grid_on</i>
-            </div>
-            <h4>{{name}}</h4>
-            <div class="skills list">
-                {{#skills}}
-                    <div class="entry">
-                        <img class="icon" src="{{icon_path}}"/>
-                        <span class="name">{{name}}{{#qualifier}}
-                            <span class="qualifier">{{qualifier}}</span>{{/qualifier}}</span>
-                        <div class="meter {{meter_class}}" title="{{proficiency}}/5.0">
-                            <div style="{{{meter_style}}}"></div>
+            {{^small}}
+                <div class="view-switcher noscript">
+                    <span>View mode:</span>
+                    <i class="material-icons button">grid_on</i>
+                </div>
+                <h4>{{name}}</h4>
+                <div class="skills list">
+                    {{#skills}}
+                        <div class="entry">
+                            <img class="icon" src="{{icon_path}}"/>
+                            <span class="name">{{name}}{{#qualifier}}
+                                <span class="qualifier">{{qualifier}}</span>{{/qualifier}}</span>
+                            <div class="meter {{meter_class}}" title="{{proficiency}}/5.0">
+                                <div style="{{{meter_style}}}"></div>
+                            </div>
+                            <span class="indicator">{{meter_percentage}}</span>
                         </div>
-                        <span class="indicator">{{meter_percentage}}</span>
-                    </div>
-                {{/skills}}
-            </div>
+                    {{/skills}}
+                </div>
+            {{/small}}
+            {{#small}}
+                <h4>{{name}}</h4>
+                <div class="skills small">
+                    {{#skills}}
+                        {{^is_phony}}
+                            <div class="entry" title="{{name}}: {{proficiency}}/5.0">
+                                <img class="icon" src="{{icon_path}}"/>
+                            </div>
+                        {{/is_phony}}
+                        {{#is_phony}}
+                            <div class="entry" title="{{name}}">
+                                <img class="icon" src="{{icon_path}}"/>
+                            </div>
+                        {{/is_phony}}
+                    {{/skills}}
+                </div>
+            {{/small}}
             {{{description}}}
         </section>
     {{/categories}}
@@ -41,7 +60,9 @@
     }
 
     for (const e of document.querySelectorAll(".skills")) {
-        e.classList.remove("list");
-        e.classList.add("grid");
+        if (e.classList.contains("list")) {
+            e.classList.remove("list");
+            e.classList.add("grid");
+        }
     }
 </script>

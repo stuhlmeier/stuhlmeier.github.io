@@ -33,6 +33,10 @@
     -ms-text-size-adjust: none;
 }
 
+.subtle {
+    color: var(--subtle-content-color);
+}
+
 body * {
     transition: background-color var(--theme-transition),
     color var(--theme-transition),

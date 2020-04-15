@@ -9,7 +9,9 @@ data class Skill(
 
     private val processor: (String) -> String = { it }
 ) {
+    val is_phony get() = _proficiency.isNaN()
     val proficiency get() = _proficiency
+
     val name get() = _name
     val qualifier get() = _qualifier
 
@@ -29,12 +31,14 @@ data class SkillCategory(
     private val _name: String,
     private val _skills: List<Skill>,
     private val _text: String = "",
+    private val _small: Boolean = false,
 
     private val processor: (String) -> String = { it }
 ) {
     val name get() = _name
     val skills get() = _skills
     val description get() = processor(_text)
+    val small get() = _small
 
     fun withProcessor(processor: (String) -> String): SkillCategory {
         return copy(_skills = _skills.map { it.copy(processor = processor) }, processor = processor)
@@ -59,7 +63,7 @@ I have been writing Java since 2014, shortly before the release of Java 8.
 I started primarily using Kotlin when it was first released as version 1.0 back in 2016,
 and have since familiarized myself with all aspects of the language.
 
-I like to write just about anything for the JVM, especially cloud services and user interfaces. 
+I like to write just about anything for the JVM, especially cloud services and user interfaces.
         """.trimIndent()
     ),
     SkillCategory(
@@ -105,11 +109,38 @@ I like to use C# to write cloud-based web applications (thanks, Azure).
     SkillCategory(
         "Tools", listOf(
             Skill(4.75, "GNU Coreutils", _iconPath = "gnu.svg"),
-            Skill(4.50, "Git")
+            Skill(4.75, "Linux", _iconPath = "linux-tux.svg"),
+            Skill(4.75, "macOS", _iconPath = "macos-finder.png"),
+            Skill(4.75, "Windows", _iconPath = "windows.svg"),
+            Skill(4.50, "Git"),
+
+            Skill(Double.NaN, "JetBrains Toolbox", _iconPath = "toolbox.svg"),
+            Skill(5.00, "IntelliJ IDEA", _iconPath = "idea.svg"),
+            Skill(4.75, "Android Studio", _iconPath = "android-studio.svg"),
+            Skill(4.50, "Rider"),
+            Skill(4.50, "PyCharm"),
+
+            Skill(4.50, "Visual Studio Code, VSCodium", _iconPath = "vscode.svg"),
+            Skill(4.00, "Microsoft Visual Studio", _iconPath = "vs.svg"),
+            Skill(Double.NaN, "JetBrains ReSharper", _iconPath = "resharperpp.svg"),
+
+            Skill(4.00, "Docker", _iconPath = "docker-moby.png"),
+
+            Skill(Double.NaN, "LLVM, Clang", _iconPath = "llvm-head.png"),
+
+            Skill(4.50, "TeX (LaTeX, XeTeX)", _iconPath = "tex.svg"),
+            Skill(Double.NaN, "Asciidoc, Asciidoctor", _iconPath = "asciidoctor.svg"),
+            Skill(Double.NaN, "Microsoft Office", _iconPath = "office.svg"),
+            Skill(4.00, "Adobe After Effects", _iconPath = "ae.svg"),
+            Skill(Double.NaN, "Doxygen", _iconPath = "doxygen-bowl.png")
         ),
+        _small = true,
         _text = """
 As I usually work on Arch Linux, I have had quite a while to become familiar with core POSIX utilities
-and other useful tools. I am relatively comfortable using Git for version control.
+and other useful tools.
+However, I have also had experience using Windows and macOS for both casual and professional purposes.
+
+I am relatively comfortable using Git for version control.
         """.trimIndent()
     ),
     SkillCategory(

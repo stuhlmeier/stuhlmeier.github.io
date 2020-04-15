@@ -1,7 +1,7 @@
 :root.theme-light {
     --main-content-color: black;
     --side-content-color: gray;
-    --subtle-content-color: lightgray;
+    --subtle-content-color: #CCCCCC;
 
     --block-background-color: aliceblue;
     --alt-block-background-color: aliceblue;
