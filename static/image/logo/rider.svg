@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70">
+  <defs>
+    <linearGradient id="a" x1="70.226" y1="27.799" x2="-5.13" y2="63.122" gradientTransform="matrix(1 0 0 -1 0 71.28)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c90f5e"/>
+      <stop offset=".221" stop-color="#c90f5e"/>
+      <stop offset=".236" stop-color="#c90f5e"/>
+      <stop offset=".356" stop-color="#ca135c"/>
+      <stop offset=".466" stop-color="#ce1e57"/>
+      <stop offset=".574" stop-color="#d4314e"/>
+      <stop offset=".678" stop-color="#dc4b41"/>
+      <stop offset=".782" stop-color="#e66d31"/>
+      <stop offset=".883" stop-color="#f3961d"/>
+      <stop offset=".942" stop-color="#fcb20f"/>
+    </linearGradient>
+    <linearGradient id="b" x1="24.659" y1="61.996" x2="46.048" y2="2.934" gradientTransform="matrix(1 0 0 -1 0 71.28)" gradientUnits="userSpaceOnUse">
+      <stop offset=".042" stop-color="#077cfb"/>
+      <stop offset=".445" stop-color="#c90f5e"/>
+      <stop offset=".958" stop-color="#077cfb"/>
+    </linearGradient>
+    <linearGradient id="c" x1="17.396" y1="63.346" x2="33.194" y2="7.201" gradientTransform="matrix(1 0 0 -1 0 71.28)" gradientUnits="userSpaceOnUse">
+      <stop offset=".277" stop-color="#c90f5e"/>
+      <stop offset=".974" stop-color="#fcb20f"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#a)" d="M70 27.237l-6.609-3.487L20.926 0 3.827 17.921l17.792 23.147 38.918 3.329L70 27.237z"/>
+  <path fill="url(#b)" d="M50.423 16.132L44.271 1.107 27.643 17.471 11.768 50.194 49.411 70 70 57.98 50.423 16.132z"/>
+  <path fill="url(#c)" d="M20.926 0L0 14.095l7.779 48.077 20.069 7.717L53.78 48.823 20.926 0z"/>
+  <g>
+    <path d="M13.302 13.193h43.614v43.614H13.302z"/>
+    <g fill="#fff">
+      <path d="M17.227 18.863h8.396a7.384 7.384 0 015.343 1.854 5.87 5.87 0 011.526 4.143 5.743 5.743 0 01-3.925 5.67l4.47 6.542H28.35l-3.925-5.888h-3.162v5.888h-4.035v-18.21zm8.069 8.832c1.963 0 3.053-1.09 3.053-2.617 0-1.745-1.2-2.617-3.162-2.617h-4.034v5.234h4.143zM36.09 18.863h7.197c5.778 0 9.704 3.925 9.704 9.159 0 5.124-3.926 9.159-9.704 9.159H36.09V18.863zm4.035 3.598v11.013h3.162a5.237 5.237 0 005.56-5.452 5.265 5.265 0 00-5.56-5.56h-3.162z"/>
+    </g>
+    <path fill="#fff" d="M17.227 48.629h16.355v2.726H17.227z"/>
+  </g>
+</svg>

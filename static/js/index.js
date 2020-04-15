@@ -10,7 +10,8 @@ function setViewMode(useGrid) {
     }
 
     for (const view of views) {
-        if (gridOn) {
+        if (view.classList.contains("small")) continue;
+        else if (gridOn) {
             view.classList.remove("list");
             view.classList.add("grid");
         } else {

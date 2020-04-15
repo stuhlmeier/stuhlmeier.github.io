@@ -64,6 +64,45 @@
     font-size: 80%;
 }
 
+.skills.small {
+    --item-size: 64px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--item-size), 1fr));
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.skills.small .entry {
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--item-size);
+    height: var(--item-size);
+
+    border-radius: 5px;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition: border-color 0.2s linear;
+}
+
+.skills.small .entry:hover {
+    border-color: var(--focus-border-color);
+}
+
+.skills.small .entry > .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* Grid format (default) */
 .skills.grid {
     --item-width: 160px;
