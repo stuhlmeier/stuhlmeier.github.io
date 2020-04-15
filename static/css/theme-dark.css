@@ -11,8 +11,8 @@
     --focus-border-color: darkgray;
     --border-color: rgb(75, 75, 75);
 
-
-    --link-color: rgb(66, 167, 255);
+    --link-color: #42a7ff;
+    --hover-link-color: #7ec3ff;
 }
 
 :root.theme-dark .skills .meter {

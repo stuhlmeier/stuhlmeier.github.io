@@ -74,7 +74,7 @@
 }
 
 .skills.small .entry {
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
 
     display: flex;
     align-items: center;
@@ -95,6 +95,14 @@
 
 .skills.small .entry:hover {
     border-color: var(--focus-border-color);
+}
+
+.skills.small a > .entry {
+    border-color: var(--link-color);
+}
+
+.skills.small a > .entry:hover {
+    border-color: var(--hover-link-color);
 }
 
 .skills.small .entry > .icon {
@@ -118,7 +126,7 @@
 }
 
 .skills.grid .entry {
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
 
     display: flex;
     flex-direction: column;
