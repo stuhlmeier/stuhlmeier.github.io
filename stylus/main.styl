@@ -1,3 +1,5 @@
+@import "media"
+
 #container
   max-width: var(--container-width)
   margin: 40px auto
@@ -35,7 +37,7 @@ main
 section + section
   margin-top: 16px
 
-@media screen and (max-width: 1000px)
+@media $screen-large
   section + section
     margin-top: 20px
 
@@ -71,14 +73,14 @@ p code
   padding: 1px 3px
   box-sizing: border-box
 
-@media screen and (max-width: 1000px)
+@media $screen-large
   #container
     border: none
 
   footer p
     font-size: 11pt
 
-@media screen and (max-width: 768px)
+@media $screen-medium
   #container
     margin: 10px
     padding: 0
@@ -87,4 +89,3 @@ p code
   footer p
     font-size: 13pt
     text-align: center
-

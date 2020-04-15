@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Bree+Serif|Source+Sans+Pro&display=swap")
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons")
+
+@import "media"
+
 :root
   --navbar-margin: 40px
   --navbar-padding: 10px
@@ -39,7 +42,7 @@ code
   font-family: var(--monospace-font)
   font-size: 11pt
 
-@media screen and (max-width: 1000px)
+@media $screen-large
   :root
     --head-font-size: 52pt
     --content-font-size: 16pt
@@ -102,4 +105,3 @@ a
 
 a:hover
   text-decoration: underline
-

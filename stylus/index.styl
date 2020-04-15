@@ -1,8 +1,10 @@
+@import "media"
+
 :root
   --meter-height: 20px
   --skills-font-size: 14pt
 
-@media screen and (max-width: 1000px)
+@media $screen-large
   :root
     --skills-font-size: 16pt
 
@@ -39,7 +41,7 @@
   font-size: var(--skills-font-size)
   animation: fadeIn 0.3s ease
 
-@media screen and (max-width: 1000px)
+@media $screen-large
   .skills
     margin: 10px 0 16px 0
 
@@ -142,7 +144,7 @@
   grid-template-columns: 18pt 3fr 7fr auto
   column-gap: 10px
 
-@media screen and (max-width: 1000px)
+@media $screen-large
   .skills.list .entry
     grid-template-columns: 18pt 4fr 6fr auto
 
