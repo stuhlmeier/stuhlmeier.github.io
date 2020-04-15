@@ -111,5 +111,6 @@ p code {
 
     footer p {
         font-size: 13pt;
+        text-align: center;
     }
 }
