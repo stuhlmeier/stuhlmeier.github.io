@@ -6,6 +6,7 @@ data class Skill(
     private val _name: String,
     private val _qualifier: String? = null,
     private val _iconPath: String? = null,
+    private val _url: String? = null,
     private val _richTooltipText: String? = null,
 
     private val processor: (String) -> String = { it }
@@ -15,6 +16,8 @@ data class Skill(
 
     val name get() = _name
     val qualifier get() = _qualifier
+
+    val url get() = _url
 
     val icon_path get() = Path.of("/static/image/logo/", _iconPath ?: "${_name.toLowerCase().trim()}.svg")
     val meter_percentage get() = "${(_proficiency * 20).roundToInt()}%"
@@ -115,34 +118,34 @@ I like to use C# to write cloud-based web applications (thanks, Azure).
     ),
     SkillCategory(
         "Tools", listOf(
-            Skill(4.75, "GNU Coreutils", _iconPath = "gnu.svg"),
-            Skill(4.75, "Linux", _iconPath = "linux-tux.svg"),
-            Skill(4.75, "macOS", _iconPath = "macos-finder.png"),
-            Skill(4.75, "Windows", _iconPath = "windows.svg"),
-            Skill(4.50, "Git"),
+            Skill(4.75, "GNU Coreutils", _url = "https://www.gnu.org/software/coreutils/", _iconPath = "gnu.svg"),
+            Skill(4.75, "Linux", _url = "https://www.kernel.org/", _iconPath = "linux-tux.svg"),
+            Skill(4.75, "macOS", _url = "https://www.apple.com/macos/", _iconPath = "macos-finder.png"),
+            Skill(4.75, "Windows", _url = "https://www.microsoft.com/windows", _iconPath = "windows.svg"),
+            Skill(4.50, "Git", _url = "https://git-scm.com/"),
 
-            Skill(Double.NaN, "JetBrains Toolbox", _iconPath = "toolbox.svg"),
-            Skill(5.00, "IntelliJ IDEA", _iconPath = "idea.svg"),
-            Skill(4.75, "Android Studio", _iconPath = "android-studio.svg"),
-            Skill(4.50, "Rider"),
-            Skill(4.50, "PyCharm"),
+            Skill(Double.NaN, "JetBrains Toolbox", _url = "https://www.jetbrains.com/toolbox-app/", _iconPath = "toolbox.svg"),
+            Skill(5.00, "IntelliJ IDEA", _url = "https://www.jetbrains.com/idea/", _iconPath = "idea.svg"),
+            Skill(4.75, "Android Studio", _url = "https://developer.android.com/studio/", _iconPath = "android-studio.svg"),
+            Skill(4.50, "Rider", _url = "https://www.jetbrains.com/rider/"),
+            Skill(4.50, "PyCharm", _url = "https://www.jetbrains.com/pycharm/"),
 
-            Skill(4.50, "Visual Studio Code, VSCodium", _iconPath = "vscode.svg"),
-            Skill(4.00, "Microsoft Visual Studio", _iconPath = "vs.svg"),
-            Skill(Double.NaN, "JetBrains ReSharper", _iconPath = "resharperpp.svg"),
+            Skill(4.50, "Visual Studio Code, VSCodium", _url = "https://code.visualstudio.com/", _iconPath = "vscode.svg"),
+            Skill(4.00, "Microsoft Visual Studio", _url = "https://visualstudio.microsoft.com/", _iconPath = "vs.svg"),
+            Skill(Double.NaN, "JetBrains ReSharper", _url = "https://www.jetbrains.com/resharper/", _iconPath = "resharperpp.svg"),
 
-            Skill(4.00, "Docker", _iconPath = "docker-moby.png"),
+            Skill(4.00, "Docker", _url = "https://www.docker.com/", _iconPath = "docker-moby.png"),
 
-            Skill(Double.NaN, "LLVM, Clang", _iconPath = "llvm-head.png"),
+            Skill(Double.NaN, "LLVM, Clang", _url = "https://llvm.org/", _iconPath = "llvm-head.png"),
 
             Skill(
                 4.50, "TeX (LaTeX, XeTeX)", _iconPath = "tex-bg.svg",
                 _richTooltipText = "<img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/tex.svg'/> (<img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/latex.svg'/>, <img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/xetex.svg'/>)"
             ),
-            Skill(Double.NaN, "Asciidoc, Asciidoctor", _iconPath = "asciidoctor.svg"),
-            Skill(Double.NaN, "Microsoft Office", _iconPath = "office.svg"),
-            Skill(4.00, "Adobe After Effects", _iconPath = "ae.svg"),
-            Skill(Double.NaN, "Doxygen", _iconPath = "doxygen-bowl.png")
+            Skill(Double.NaN, "Asciidoc, Asciidoctor", _url = "http://asciidoc.org/", _iconPath = "asciidoctor.svg"),
+            Skill(Double.NaN, "Microsoft Office", _url = "https://www.office.com/", _iconPath = "office.svg"),
+            Skill(4.00, "Adobe After Effects", _url = "https://www.adobe.com/products/aftereffects.html", _iconPath = "ae.svg"),
+            Skill(Double.NaN, "Doxygen", _url = "http://www.doxygen.nl/", _iconPath = "doxygen-bowl.png")
         ),
         _small = true,
         _text = """

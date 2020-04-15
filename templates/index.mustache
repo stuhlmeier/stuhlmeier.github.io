@@ -36,9 +36,18 @@
                 <h4>{{name}}</h4>
                 <div class="skills small">
                     {{#skills}}
-                        <div class="entry" title="{{tooltip_text}}" data-tooltip="{{{rich_tooltip_text}}}">
-                            <img class="icon" src="{{icon_path}}"/>
-                        </div>
+                        {{#url}}
+                            <a href="{{url}}">
+                                <div class="entry" title="{{tooltip_text}}" data-tooltip="{{{rich_tooltip_text}}}">
+                                    <img class="icon" src="{{icon_path}}"/>
+                                </div>
+                            </a>
+                        {{/url}}
+                        {{^url}}
+                            <div class="entry" title="{{tooltip_text}}" data-tooltip="{{{rich_tooltip_text}}}">
+                                <img class="icon" src="{{icon_path}}"/>
+                            </div>
+                        {{/url}}
                     {{/skills}}
                 </div>
             {{/small}}
