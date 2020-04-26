@@ -126,6 +126,7 @@ render(
         "main" to templateRoot.resolve("about.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/about.css">
+            <script defer="" src="/static/js/about.js"></script>
         """.trimIndent()
     )
 )
