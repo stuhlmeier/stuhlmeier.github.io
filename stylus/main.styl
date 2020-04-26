@@ -60,6 +60,11 @@ footer
   flex-direction: column
   align-items: flex-start
 
+  @media $screen-medium
+    margin-top: 30px
+    margin-bottom: 60px
+    align-items: center
+
   p
     margin: 0
     font-size: 10pt
@@ -75,6 +80,9 @@ footer
 
   nav
     margin-bottom: 5px
+
+    @media $screen-medium
+      margin-bottom: 10px
 
     a
       text-decoration: none !important
