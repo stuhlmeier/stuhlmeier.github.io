@@ -9,9 +9,9 @@
         <ul class="tag-list">
             {{#tags}}
                 <li class="tag {{tag_class}}" {{#tag_description}}title="{{tag_description}}"{{/tag_description}}>
-                    {{#tag_icon_path}}
-                        <img src="{{tag_icon_path}}"/>
-                    {{/tag_icon_path}}
+                    {{#tag_icon_paths}}
+                        <img src="{{.}}"/>
+                    {{/tag_icon_paths}}
                     {{tag}}
                 </li>
             {{/tags}}
