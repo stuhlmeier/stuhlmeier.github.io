@@ -16,14 +16,15 @@
   padding-right: 20px
   cursor: pointer
 
-#navbar-arrow img
-  transition: transform 0.2s ease
+  @media $screen-medium
+    display: none
 
-#navbar-arrow img
-  transform: rotate(0deg)
+  img
+    transition: transform 0.2s ease
+    transform: rotate(0deg)
 
-#navbar-wrapper.opened #navbar-arrow img
-  transform: rotate(90deg)
+    #navbar-wrapper.opened &
+      transform: rotate(90deg)
 
 #navbar-top
   opacity: 0
@@ -31,21 +32,26 @@
   visibility: hidden
   transition: opacity 0.3s linear
 
-#navbar-wrapper.opened #navbar-top
-  opacity: 1
-  height: auto
-  visibility: visible
+  @media $screen-medium
+    opacity: 1
+    height: auto
+    visibility: visible
 
-#navbar-top ul
-  list-style-type: none
-  margin: 0
-  padding: 0
+  #navbar-wrapper.opened &
+    opacity: 1
+    height: auto
+    visibility: visible
 
-#navbar-top a
-  color: var(--main-content-color)
-  font-family: var(--head-font)
-  font-size: var(--description-font-size)
-  text-decoration: none
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+  a
+    color: var(--main-content-color)
+    font-family: var(--head-font)
+    font-size: var(--description-font-size)
+    text-decoration: none
 
 #description-wrapper
   position: relative
@@ -55,34 +61,25 @@
   height: calc(var(--description-font-size) * var(--description-line-height))
   cursor: pointer
 
-#description-wrapper.animated h2
-  animation: 0.4s ease-in-out 0.7s slideUp
-  animation-iteration-count: 1
-  animation-fill-mode: forwards
+  @media $screen-medium
+    cursor: default
 
-#description-wrapper h2
-  color: var(--side-content-color)
-  max-width: 750px
-  user-select: none
-  text-overflow: ellipsis
-  white-space: nowrap
-  overflow: hidden
+  h2
+    color: var(--side-content-color)
+    max-width: 750px
+    user-select: none
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+
+  &.animated h2
+    animation: 0.4s ease-in-out 0.7s slideUp
+    animation-iteration-count: 1
+    animation-fill-mode: forwards
 
 #description2
   position: absolute
   top: calc(-1 * var(--description-font-size) * var(--description-line-height))
-
-@media $screen-medium
-  #navbar-arrow
-    display: none
-
-  #navbar-top
-    opacity: 1
-    height: auto
-    visibility: visible
-
-  #description-wrapper
-    cursor: default
 
 @keyframes slideUp
   from
