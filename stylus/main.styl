@@ -8,6 +8,14 @@
   border-left: 1px solid var(--border-color)
   border-right: 1px solid var(--border-color)
 
+  @media $screen-large
+    border: none
+
+  @media $screen-medium
+    margin: 10px
+    padding: 0
+    border: none
+
 #theme-switcher
   color: var(--subtle-content-color)
   cursor: pointer
@@ -34,18 +42,17 @@ hr
 main
   margin: 20px 0
 
-section + section
-  margin-top: 16px
-
-@media $screen-large
   section + section
-    margin-top: 20px
+    margin-top: 16px
 
-p
-  margin: 0
+    @media $screen-large
+      margin-top: 20px
 
-p + p
-  margin-top: 16px
+  p
+    margin: 0
+
+  p + p
+    margin-top: 16px
 
 footer
   margin-top: 40px
@@ -53,16 +60,27 @@ footer
   flex-direction: column
   align-items: flex-start
 
-footer p
-  margin: 0
-  font-size: 10pt
-  color: var(--side-content-color)
+  p
+    margin: 0
+    font-size: 10pt
+    color: var(--side-content-color)
 
-footer nav a
-  text-decoration: none !important
+    @media $screen-large
+      font-size: 11pt
 
-footer nav a > *
-  display: block !important
+
+    @media $screen-medium
+      font-size: 13pt
+      text-align: center
+
+  nav
+    margin-bottom: 5px
+
+    a
+      text-decoration: none !important
+
+      & > *
+        display: block !important
 
 p code
   background-color: var(--block-background-color)
@@ -72,20 +90,3 @@ p code
   border-radius: 3px
   padding: 1px 3px
   box-sizing: border-box
-
-@media $screen-large
-  #container
-    border: none
-
-  footer p
-    font-size: 11pt
-
-@media $screen-medium
-  #container
-    margin: 10px
-    padding: 0
-    border: none
-
-  footer p
-    font-size: 13pt
-    text-align: center
