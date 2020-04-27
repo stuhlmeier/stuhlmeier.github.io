@@ -136,15 +136,12 @@ I like to use C# to write cloud-based web applications (thanks, Azure).
 
             Skill(4.00, "Docker", _url = "https://www.docker.com/", _iconPath = "docker-moby.png"),
 
-            Skill(Double.NaN, "LLVM, Clang", _url = "https://llvm.org/", _iconPath = "llvm-head.png"),
-
             Skill(
                 4.50, "TeX (LaTeX, XeTeX)", _iconPath = "tex-bg.svg",
                 _richTooltipText = "<img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/tex.svg'/> (<img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/latex.svg'/>, <img style='display: inline; height: 1em; vertical-align: middle;' src='/static/image/logo/xetex.svg'/>)"
             ),
             Skill(Double.NaN, "Asciidoc, Asciidoctor", _url = "http://asciidoc.org/", _iconPath = "asciidoctor.svg"),
             Skill(Double.NaN, "Microsoft Office", _url = "https://www.office.com/", _iconPath = "office.svg"),
-            Skill(4.00, "Adobe After Effects", _url = "https://www.adobe.com/products/aftereffects.html", _iconPath = "ae.svg"),
             Skill(Double.NaN, "Doxygen", _url = "http://www.doxygen.nl/", _iconPath = "doxygen-bowl.png")
         ),
         _small = true,
