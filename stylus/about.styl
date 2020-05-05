@@ -3,9 +3,48 @@ table
   border-collapse: collapse
 
   th
-    padding: 0 10px 0 0
+    margin: 0
+    padding: 5px 10px 5px 0
     text-align: left
+    vertical-align: text-top
 
   td
     margin: 0
-    padding: 0
+    padding: 5px 0
+    text-align: left
+
+    display: flex
+    flex-direction: row
+    align-items: baseline
+
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+      li
+        display: flex
+        flex-direction: row
+        align-items: baseline
+
+  tr:not(:nth-child(1))
+    border-top: 1px solid var(--border-color)
+
+.flag
+  display: inline
+
+  border-radius: 3px
+  height: 1em
+  max-width: calc(5em / 3)
+
+  margin-right: 0.3em
+  user-select: none
+  pointer-events: none
+
+  object-fit: cover
+
+  &.cut-center
+    object-position: 50% 50%
+
+  &.cut-left
+    object-position: 0 50%
