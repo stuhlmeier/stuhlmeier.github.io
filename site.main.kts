@@ -6,7 +6,7 @@
 @file:DependsOn("com.googlecode.htmlcompressor:htmlcompressor:1.5.2")
 
 @file:Import(
-    "templates/index.kts",
+    "templates/overview.kts",
     "templates/projects.kts",
     "templates/about.kts"
 )
@@ -102,10 +102,10 @@ val mixins = mapOf(
 )
 
 render(
-    "base", index(processor) + mixins, "index", mapOf(
-        "main" to templateRoot.resolve("index.mustache"),
+    "base", overview(processor) + mixins, "overview", mapOf(
+        "main" to templateRoot.resolve("overview.mustache"),
         "head" to """
-            <link rel="stylesheet" href="/static/css/index.css">
+            <link rel="stylesheet" href="/static/css/overview.css">
             <script defer="" src="/static/js/cycle.js"></script>
             <script defer="" src="/static/js/index.js"></script>
         """.trimIndent()
