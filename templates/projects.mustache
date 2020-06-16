@@ -1,21 +1,23 @@
-{{#projects}}
-    <section class="project">
-        <h3>
-            {{#url}}<a href="{{url}}">{{name}}</a>{{/url}}
-            {{^url}}{{name}}{{/url}}
-        </h3>
-        {{#url}}<a href="{{url}}"><img class="icon" src="{{icon_path}}"/></a>{{/url}}
-        {{^url}}<img class="icon" src="{{icon_path}}"/>{{/url}}
-        <ul class="tag-list">
-            {{#tags}}
-                <li class="tag {{tag_class}}" {{#tag_description}}title="{{tag_description}}"{{/tag_description}}>
-                    {{#tag_icon_paths}}
-                        <img src="{{.}}"/>
-                    {{/tag_icon_paths}}
-                    {{tag}}
-                </li>
-            {{/tags}}
-        </ul>
-        {{{text}}}
-    </section>
-{{/projects}}
+<section>
+    <h2 id="top">My projects</h2>
+    {{#projects}}
+        <section class="project">
+            {{^id}}
+            <h3>
+            {{/id}}
+            {{#id}}
+            <h3 id="{{id}}">
+            {{/id}}
+                {{#url}}<a href="{{url}}">{{name}}</a>{{/url}}
+                {{^url}}{{name}}{{/url}}
+            </h3>
+            <div class="project-content-container">
+                {{#url}}<a href="{{url}}"><img class="icon" src="{{icon_path}}"/></a>{{/url}}
+                {{^url}}<img class="icon" src="{{icon_path}}"/>{{/url}}
+                <div class="project-text">
+                    {{{text}}}
+                </div>
+            </div>
+        </section>
+    {{/projects}}
+</section>

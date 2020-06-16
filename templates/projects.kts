@@ -14,6 +14,7 @@ data class Tag(
 
 data class Project(
     private val _name: String,
+    private val _id: String,
     private val _brief: String?,
     private val _description: String?,
     private val _iconPath: String,
@@ -24,6 +25,7 @@ data class Project(
 ) {
     val url get() = _url
     val name get() = _name
+    val id get() = _id
     val icon_path get() = Path.of("/static/image/logo/", _iconPath)
     val tags get() = _tags
     val brief get() = _brief
@@ -65,9 +67,14 @@ val PROJECTS_TAG_OPENCV = Tag("opencv")
 
 val PROJECTS_PROJECTS = listOf(
     Project(
-        "Kotlin events",
-        "<code>kotlinx.events</code> is a simple event library for Kotlin.",
-        null,
+        "Kotlin events", "kotlin-events",
+        """
+            <code>kotlinx.events</code> is a small, simple event library for Kotlin,
+            focused on ease of use and familiarity.
+        """.trimIndent(), """
+            It provides a high-level façade to abstract away the details of handling events and event listeners,
+            analogously to the <code>event</code> language feature in C#.
+        """.trimIndent(),
         "kotlin.svg",
         "https://github.com/stuhlmeier/kotlin-events/",
         _tags = listOf(
@@ -77,12 +84,14 @@ val PROJECTS_PROJECTS = listOf(
         )
     ),
     Project(
-        "memistry",
+        "memistry", "memistry",
         """
-            A chemistry trainer.
+            A web-based chemistry trainer,
         """.trimIndent(), """
-            Provides questions to aid learning or memorization.
-            Currently, it generates random questions concerning the periodic table and its elements.
+            written mostly in a day for self-study purposes.
+
+            memistry provides randomized questions to aid learning or memorization;
+            currently, it generates questions concerning the periodic table, its elements, and their properties.
         """.trimIndent(),
         "js.svg",
         "https://stuhlmeier.github.io/memistry/",
@@ -93,7 +102,7 @@ val PROJECTS_PROJECTS = listOf(
         )
     ),
     Project(
-        "GDPR",
+        "GDPR", "gdpr",
         """
             A summary of the General Data Protection Regulation
             (<em>Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016</em>).
@@ -110,9 +119,12 @@ val PROJECTS_PROJECTS = listOf(
         )
     ),
     Project(
-        "Melange",
-        "A documentation generator for the Clang frontend.",
-        "Written using LLVM 9/10 LibTooling and generates HTML5 documentation using Mustache.",
+        "Melange", "melange",
+        "A documentation generator for the Clang frontend.", """
+            Written using LLVM 9/10 LibTooling and generates HTML5 documentation using Mustache.
+
+            <span class="warn">This project has not been finished and is not currently public.</span>
+        """.trimIndent(),
         "cpp.svg",
         "https://github.com/stuhlmeier/melange/",
         _tags = listOf(
@@ -126,10 +138,16 @@ val PROJECTS_PROJECTS = listOf(
         )
     ),
     Project(
-        "ringcode",
+        "ringcode", "ringcode",
         "A circular, color-based tag format for encoding bytes.", """
             Consists of a generator and a reader written in JavaScript
             with the Canvas API and OpenCV's Emscripten bindings.
+            This was conceived and written as part of a school project
+            involving augmented reality and Microsoft's HoloLens&trade;.
+
+            While it is not particularly efficient with respect to storage density,
+            it functioned primarily as a learning experience,
+            and as a proof-of-concept for the cross-platform usage of OpenCV.
         """.trimIndent(),
         "js.svg",
         "https://github.com/stuhlmeier/ringcode-js/",
