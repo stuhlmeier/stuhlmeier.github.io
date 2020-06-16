@@ -31,7 +31,7 @@ h3
     font-size: 12pt
 
 h4
-    font-size: 11pt
+    font-size: 11.5pt
     font-style: italic
 
 a
@@ -119,6 +119,8 @@ table
     border-right: 1px solid gainsboro
 
 #container-head
+    overflow: auto
+
     h1
         em
             font-style: normal
@@ -129,13 +131,25 @@ table
         font-style: italic
         color: gray
 
+#nav-container
+    margin: 5px 0 0 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
     nav
-        text-transform: lowercase
+        display: inline-block
 
         ul
             list-style-type: none
-            margin: 10px 0 0 0
+            margin: 0
             padding: 0
+
+    nav#left-nav
+        text-transform: lowercase
+
+        ul
             display: flex
             flex-direction: row
             align-items: center
@@ -158,10 +172,23 @@ table
         li:last-child a
             padding-right: 0
 
+    nav#right-nav
+        ul
+            display: flex
+            flex-direction: row
+            align-items: center
+
+        li
+            margin-left: 10px
+
+        img
+            width: 24px
+            max-height: 24px
+
 #container-head + hr
     width: 100%
     border-top: 1px solid darkgray
-    margin-top: 10px
+    margin-top: 5px
 
 hr
     margin: 20px auto
