@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Source+Sans+Pro&display=swap")
+
+@font-face
+    font-family: 'Cascadia Code'
+    src: url('/static/font/CascadiaCode.woff2')
+
+body
+    font-family: 'Source Sans Pro', sans-serif
+
+h1, h2, h3, h4, h5, h6
+    font-weight: normal
+    font-style: normal
+    font-family: 'Cascadia Code', monospace
+    margin: 0
+
+p
+    margin: 0
+
+h1
+    font-size: 24pt
+    color: darken(steelblue, 30%)
+
+h2
+    font-size: 14pt
+
+h3
+    font-size: 12pt
+
+a
+    color: inherit
+    text-decoration: none
+
+table
+    border-collapse: collapse
+
+    th, td
+        text-align: left
+
+    th
+        padding-right: 10px
+
+.side-content
+    color: gray
+
+.block
+    display: block
+    background-color: whitesmoke
+    padding: 5px
+    margin: 10px 0
+    position: relative
+    border-left: 3px solid steelblue
+
+    .tag
+        user-select: none
+        float: right
+        font-family: 'Cascadia Code', monospace
+        margin: -5px -5px 0 0
+        min-width: 20px
+        text-align: center
+        font-size: 10pt
+        padding: 2px
+        background-color: #e3e3e3
+        top: 0
+        right: 0
+
+.heading-anchor
+    float: left
+    margin-left: -20px
+    color: darkgray
+    transition: color 0.2s
+
+    &:hover
+        color: slategray
+
+#container
+    max-width: 700px
+    margin: 40px auto
+    padding: 10px 50px
+    border-left: 1px solid gainsboro
+    border-right: 1px solid gainsboro
+
+#container-head
+    h1
+        em
+            font-style: normal
+            font-weight: bolder
+
+    h2
+        font-size: 13pt
+        font-style: italic
+        color: gray
+
+    nav
+        text-transform: lowercase
+
+        ul
+            list-style-type: none
+            margin: 10px 0 0 0
+            padding: 0
+            display: flex
+            flex-direction: row
+            align-items: center
+
+        li:not(:first-child)::before
+            border-left: 1px solid gray
+            content: ''
+
+        a
+            padding: 0 15px
+            color: #0077aa
+            transition: color 0.2s
+
+            &:hover
+                color: #1abaff
+
+        li:first-child a
+            padding-left: 0
+
+        li:last-child a
+            padding-right: 0
+
+#container-head + hr
+    width: 100%
+    border-top: 1px solid darkgray
+    margin-top: 10px
+
+hr
+    margin: 20px auto
+    width: 400px
+    border: none
+    border-top: 1px solid gainsboro
+    color: gainsboro
+
+main
+    p
+        margin: 0
+
+    for n in 1..6
+        h{n}
+            text-transform: lowercase
+
+        h{n}:first-child
+            margin-top: 0
+
+        h{n} + p, h{n} + div
+            margin-top: 5px
+
+        for o in 1..6
+            h{n} + h{o}
+                margin-top: 0
+
+    p + p
+        margin-top: 5px
+
+    a
+        color: #0077aa
+
+        &:hover
+            text-decoration: underline
+
+    section:not(:first-child)
+        margin-top: 25px
+
+#container-foot
+    user-select: none
+
+    .timestamp
+        font-size: 90%
+        color: gray
+
+// Twemoji
+img.emoji {
+   height: 1em;
+   width: 1em;
+   margin: 0 .05em 0 .1em;
+   vertical-align: -0.1em;
+}

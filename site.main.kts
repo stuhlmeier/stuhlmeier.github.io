@@ -6,9 +6,9 @@
 @file:DependsOn("com.googlecode.htmlcompressor:htmlcompressor:1.5.2")
 
 @file:Import(
+    "templates/index.kts",
     "templates/overview.kts",
-    "templates/projects.kts",
-    "templates/about.kts"
+    "templates/projects.kts"
 )
 
 import com.samskivert.mustache.Mustache
@@ -20,6 +20,8 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.StandardOpenOption
 import java.time.Instant
+import java.time.LocalDate
+import java.time.Month
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
@@ -68,46 +70,43 @@ fun render(
             ).execute(context)
         )
 
+    val outPath = when (outName) {
+        "index" -> outputRoot.resolve("index.html")
+        else -> outputRoot.resolve("$outName/index.html")
+    }
+
+    Files.createDirectories(outPath.parent)
+
     Files.writeString(
-        outputRoot.resolve("$outName.html"), output,
+        outPath, output,
         StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING
     )
 
     return output
 }
 
-val navbarItems = listOf(
-    object {
-        val href = "/"
-        val title = "home"
-    },
-    object {
-        val href = "/projects.html"
-        val title = "projects"
-    },
-    object {
-        val href = "/about.html"
-        val title = "about"
-    },
-    object {
-        val href = "/static/resume.pdf"
-        val title = "résumé"
-    }
-)
-
 val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'at' HH:mm:ss.SSS O")
 val mixins = mapOf(
-    "navbar_items" to navbarItems,
+    "age" to LocalDate.of(2002, Month.JULY, 4)
+            .until(LocalDate.now(ZoneOffset.ofHours(-4)))
+            .years,
     "timestamp" to formatter.format(Instant.now().atZone(ZoneOffset.UTC))
+)
+
+render(
+    "base", index(processor) + mixins, "index", mapOf(
+        "main" to templateRoot.resolve("index.mustache"),
+        "head" to """
+            <link rel="stylesheet" href="/static/css/base.css">
+        """.trimIndent()
+    )
 )
 
 render(
     "base", overview(processor) + mixins, "overview", mapOf(
         "main" to templateRoot.resolve("overview.mustache"),
         "head" to """
-            <link rel="stylesheet" href="/static/css/overview.css">
-            <script defer="" src="/static/js/cycle.js"></script>
-            <script defer="" src="/static/js/index.js"></script>
+            <link rel="stylesheet" href="/static/css/base.css">
         """.trimIndent()
     )
 )
@@ -116,19 +115,13 @@ render(
     "base", projects(processor) + mixins, "projects", mapOf(
         "main" to templateRoot.resolve("projects.mustache"),
         "head" to """
-            <link rel="stylesheet" href="/static/css/project.css">
+            <link rel="stylesheet" href="/static/css/base.css">
         """.trimIndent()
     )
 )
 
 render(
-    "base", about() + mixins, "about", mapOf(
-        "main" to templateRoot.resolve("about.mustache"),
-        "head" to """
-            <link rel="stylesheet" href="/static/css/about.css">
-            <script defer="" src="/static/js/about.js"></script>
-        """.trimIndent()
-    )
+    "resume", mixins, "resume"
 )
 
 println("Done")

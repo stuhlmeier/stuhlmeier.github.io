@@ -171,7 +171,6 @@ using Kotlin scripts with Mustache and Markdown as a templating system.
 fun overview(processor: (String) -> String): Map<String, Any?> {
     return mapOf(
         "title" to null,
-        "index" to true,
         "categories" to INDEX_SKILL_CATEGORIES.map { it.withProcessor(processor) }
     )
 }
