@@ -50,6 +50,27 @@
         }
     </script>
     <script>
+        for (const block of document.querySelectorAll(".block[id]")) {
+            if (block.id) {
+                let special = block.querySelector(".special");
+                if (!special) {
+                    special = document.createElement("div");
+                    special.classList.add("special");
+
+                    block.prepend(special);
+                }
+
+                const link = document.createElement("a");
+                link.classList.add("block-anchor");
+
+                link.href = `#${block.id}`;
+                link.innerHTML = "§";
+
+                special.append(link);
+            }
+        }
+    </script>
+    <script>
         twemoji.parse(document.body);
     </script>
 </body>

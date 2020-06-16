@@ -1,24 +1,27 @@
 <section>
-    <h3>Hi!</h3>
+    <h2 id="top">What I do</h3>
     <p>
-        I am a student who builds software in various fields, for various platforms, in their free time.
+        Hi! I write software in various fields, for various platforms.
+    </p>
+    <p>
         At the moment, my favorite technologies to use are Kotlin and C++ (with Meson, of course.)
     </p>
     <p>
-        <i>You can view my résumé <a href="/static/resume.pdf">here</a>.</i>
+        You can view my résumé <a href="/resume">here</a>.
     </p>
 </section>
 <section>
-    <h3>My skills</h3>
+    <h3 id="skills">My skills</h3>
     {{#categories}}
         <section>
-            {{^small}}
-                <div class="view-switcher noscript">
-                    <span>View mode:</span>
-                    <i class="material-icons button">grid_on</i>
-                </div>
+            {{^id}}
+            <div class="block">
+            {{/id}}
+            {{#id}}
+            <div class="block" id="{{id}}">
+            {{/id}}
                 <h4>{{name}}</h4>
-                <div class="skills list">
+                <div class="overview">
                     {{#skills}}
                         <div class="entry">
                             <img class="icon" src="{{icon_path}}"/>
@@ -31,26 +34,7 @@
                         </div>
                     {{/skills}}
                 </div>
-            {{/small}}
-            {{#small}}
-                <h4>{{name}}</h4>
-                <div class="skills small">
-                    {{#skills}}
-                        {{#url}}
-                            <a href="{{url}}">
-                                <div class="entry" title="{{tooltip_text}}" data-tooltip="{{{rich_tooltip_text}}}">
-                                    <img class="icon" src="{{icon_path}}"/>
-                                </div>
-                            </a>
-                        {{/url}}
-                        {{^url}}
-                            <div class="entry" title="{{tooltip_text}}" data-tooltip="{{{rich_tooltip_text}}}">
-                                <img class="icon" src="{{icon_path}}"/>
-                            </div>
-                        {{/url}}
-                    {{/skills}}
-                </div>
-            {{/small}}
+            </div>
             {{{description}}}
         </section>
     {{/categories}}

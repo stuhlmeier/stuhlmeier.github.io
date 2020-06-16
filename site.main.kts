@@ -107,6 +107,7 @@ render(
         "main" to templateRoot.resolve("overview.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/base.css">
+            <link rel="stylesheet" href="/static/css/overview.css">
         """.trimIndent()
     )
 )
@@ -116,6 +117,7 @@ render(
         "main" to templateRoot.resolve("projects.mustache"),
         "head" to """
             <link rel="stylesheet" href="/static/css/base.css">
+            <link rel="stylesheet" href="/static/css/projects.css">
         """.trimIndent()
     )
 )

@@ -1,0 +1,93 @@
+:root
+  --meter-height: 20px
+  --skills-font-size: 12pt
+
+.view-switcher
+  display: flex
+  flex-direction: row
+  align-items: center
+  float: right
+
+  &.noscript
+    display: none
+
+  span:first-child
+    color: var(--subtle-content-color)
+    margin-right: 5px
+    font-size: 80%
+    font-style: italic
+    transition: color 0.2s ease
+    user-select: none
+
+    ^[0]:hover ^[-1..-1]
+      color: var(--side-content-color)
+
+  .button
+    color: var(--side-content-color)
+    cursor: pointer
+
+.overview
+  font-size: var(--skills-font-size)
+  animation: fadeIn 0.3s ease
+
+  .entry .qualifier
+    color: var(--side-content-color)
+    font-style: italic
+    font-size: 80%
+
+  // List format
+  &
+    --indicator-font-size: 90%
+    display: grid
+    grid-template-columns: auto
+    row-gap: 10px
+
+    .entry
+      display: grid
+      grid-template-columns: 18pt 2fr 7fr auto
+      column-gap: 10px
+
+      & > .icon
+        width: 18pt
+        height: 18pt
+        object-fit: contain
+        margin: auto
+
+      & > .indicator
+        color: var(--side-content-color)
+        font-size: var(--indicator-font-size)
+        width: 3em
+
+/*
+ * No meter tag because Chromium is broken:
+ * https://bugs.chromium.org/p/chromium/issues/detail?id=632510
+ */
+.meter
+  --good-color: #40BB45
+  --ok-color: #FDD835
+  --bad-color: #CC4600
+
+  width: 100%
+  height: var(--meter-height)
+  border-radius: 5px
+  overflow: hidden
+  background-color: #EEEEEE
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset
+
+  & > div
+    height: inherit
+
+  &.meter-good > div
+    background-color: var(--good-color)
+
+  &.meter-ok > div
+    background-color: var(--ok-color)
+
+  &.meter-bad > div
+    background-color: var(--bad-color)
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1

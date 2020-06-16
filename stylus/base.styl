@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6
     font-family: 'Cascadia Code', monospace
     margin: 0
 
+code
+    font-family: 'Cascadia Code', monospace
+    font-size: 90%
+
 p
     margin: 0
 
@@ -25,6 +29,10 @@ h2
 
 h3
     font-size: 12pt
+
+h4
+    font-size: 12pt
+    font-style: italic
 
 a
     color: inherit
@@ -45,27 +53,54 @@ table
 .block
     display: block
     background-color: whitesmoke
-    padding: 5px
+    padding: 10px
     margin: 10px 0
     position: relative
     border-left: 3px solid steelblue
 
-    .tag
+    for n in 1..6
+        h{n}
+            font-family: 'Source Sans Pro', sans-serif
+            font-style: normal
+            font-weight: bold
+            text-transform: none
+
+    .special
         user-select: none
+        margin: -8px -8px 0 0
         float: right
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+
+        *
+            margin: 3px
+
+    .tag
+        display: block
         font-family: 'Cascadia Code', monospace
-        margin: -5px -5px 0 0
         min-width: 20px
         text-align: center
         font-size: 10pt
         padding: 2px
         background-color: #e3e3e3
-        top: 0
-        right: 0
+
+    .block-anchor
+        text-align: center
+        min-width: 1em
+        display: block
+        color: darken(darkgray, 10%)
+        transition: color 0.2s
+        text-decoration: none !important
+
+        &:hover
+            color: darken(slategray, 10%)
 
 .heading-anchor
+    text-align: center
+    min-width: 1em
     float: left
-    margin-left: -20px
+    margin-left: -22px
     color: darkgray
     transition: color 0.2s
 
@@ -145,6 +180,9 @@ main
         h{n} + p, h{n} + div
             margin-top: 5px
 
+        h{n} + section
+            margin-top: 5px !important
+
         for o in 1..6
             h{n} + h{o}
                 margin-top: 0
@@ -157,6 +195,9 @@ main
 
         &:hover
             text-decoration: underline
+
+    section
+        margin-top: 5px
 
     section:not(:first-child)
         margin-top: 25px

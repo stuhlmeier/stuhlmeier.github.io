@@ -39,16 +39,16 @@ data class Skill(
 
 data class SkillCategory(
     private val _name: String,
+    private val _id: String,
     private val _skills: List<Skill>,
     private val _text: String = "",
-    private val _small: Boolean = false,
 
     private val processor: (String) -> String = { it }
 ) {
     val name get() = _name
+    val id get() = _id
     val skills get() = _skills
     val description get() = processor(_text)
-    val small get() = _small
 
     fun withProcessor(processor: (String) -> String): SkillCategory {
         return copy(_skills = _skills.map { it.copy(processor = processor) }, processor = processor)
@@ -57,7 +57,7 @@ data class SkillCategory(
 
 val INDEX_SKILL_CATEGORIES = listOf(
     SkillCategory(
-        "JVM", listOf(
+        "JVM", "jvm", listOf(
             Skill(5.00, "Java", "14"),
             Skill(5.00, "Kotlin", "1.3"),
             Skill(3.50, "Spring", "5"),
@@ -77,7 +77,7 @@ I like to write just about anything for the JVM, especially cloud services and u
         """.trimIndent()
     ),
     SkillCategory(
-        "Native", listOf(
+        "Native", "native", listOf(
             Skill(4.75, "C++", "20", "cpp.svg"),
             Skill(3.50, "C", "18"),
             Skill(1.75, "Rust"),
@@ -103,7 +103,7 @@ but if I am writing an extensible application (or _really_ low-level code) C is 
         """.trimIndent()
     ),
     SkillCategory(
-        ".NET", listOf(
+        ".NET", "dotnet", listOf(
             Skill(5.00, "C#", "8", "cs.svg"),
             Skill(3.75, "ASP.NET", "Core 3", "net.svg")
         ),
@@ -116,8 +116,9 @@ have enabled me to fully grasp proper C# idioms.
 I like to use C# to write cloud-based web applications (thanks, Azure).
         """.trimIndent()
     ),
+    /*
     SkillCategory(
-        "Tools", listOf(
+        "Tools", "tools", listOf(
             Skill(4.75, "GNU Coreutils", _url = "https://www.gnu.org/software/coreutils/", _iconPath = "gnu.svg"),
             Skill(4.75, "Linux", _iconPath = "linux-tux.svg"),
             Skill(4.75, "macOS", _url = "https://www.apple.com/macos/", _iconPath = "macos-finder.png"),
@@ -153,8 +154,9 @@ However, I have also had experience using Windows and macOS for both casual and 
 I am relatively comfortable using Git for version control.
         """.trimIndent()
     ),
+    */
     SkillCategory(
-        "Other", listOf(
+        "Other", "misc", listOf(
             Skill(4.75, "JavaScript", "ES10", "js.svg"),
             Skill(4.75, "CSS", "3", "css3.svg"),
             Skill(4.25, "Python", "3"),
