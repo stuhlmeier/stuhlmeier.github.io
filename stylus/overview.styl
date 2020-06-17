@@ -1,37 +1,9 @@
-:root
-  --meter-height: 20px
-  --skills-font-size: 12pt
-
-.view-switcher
-  display: flex
-  flex-direction: row
-  align-items: center
-  float: right
-
-  &.noscript
-    display: none
-
-  span:first-child
-    color: var(--subtle-content-color)
-    margin-right: 5px
-    font-size: 80%
-    font-style: italic
-    transition: color 0.2s ease
-    user-select: none
-
-    ^[0]:hover ^[-1..-1]
-      color: var(--side-content-color)
-
-  .button
-    color: var(--side-content-color)
-    cursor: pointer
-
 .overview
-  font-size: var(--skills-font-size)
+  font-size: 12pt
   animation: fadeIn 0.3s ease
 
   .entry .qualifier
-    color: var(--side-content-color)
+    color: dimgray
     font-style: italic
     font-size: 80%
 
@@ -54,10 +26,10 @@
         margin: auto
 
       & > .indicator
-        color: var(--side-content-color)
-        font-size: var(--indicator-font-size)
-        width: 3em
+        align-self: center
         color: dimgray
+        font-size: 10pt
+        width: 3em
         font-weight: bold
 
 /*
@@ -65,14 +37,9 @@
  * https://bugs.chromium.org/p/chromium/issues/detail?id=632510
  */
 .meter
-  --good-color: #40BB45
-  --ok-color: #FDD835
-  --bad-color: #CC4600
-
   margin: auto 0
-  max-height: 10pt
+  height: 10pt
   width: 100%
-  height: var(--meter-height)
   border-radius: 5px
   overflow: hidden
   background-color: #EEEEEE
@@ -82,17 +49,16 @@
     height: inherit
 
   &.meter-good > div
-    background-color: var(--good-color)
+    background-color: #40BB45
 
   &.meter-ok > div
-    background-color: var(--ok-color)
+    background-color: #FDD835
 
   &.meter-bad > div
-    background-color: var(--bad-color)
+    background-color: #CC4600
 
 @keyframes fadeIn
   from
     opacity: 0
   to
     opacity: 1
-
