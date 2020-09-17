@@ -58,9 +58,10 @@ data class SkillCategory(
 val INDEX_SKILL_CATEGORIES = listOf(
     SkillCategory(
         "JVM", "jvm", listOf(
-            Skill(5.00, "Java", "14"),
+            Skill(5.00, "Java", "15"),
             Skill(5.00, "Kotlin", "1.4"),
             Skill(4.00, "Spring", "5"),
+            Skill(3.00, "Quarkus"),
             Skill(4.25, "Gradle", "6"),
             Skill(4.00, "Maven", "3", "apache.svg")
         ),
@@ -72,6 +73,8 @@ in terms of tooling, the JVM ecosystem is the software environment I feel most c
 I have been writing Java since 2014, shortly before the release of Java 8.
 I started primarily using Kotlin when it was first released as version 1.0 back in 2016,
 and have since familiarized myself with all aspects of the language.
+
+I've written a few microservices with Spring, and have recently begun experimenting with Quarkus.
 
 I like to write just about anything for the JVM.
         """.trimIndent()
@@ -87,7 +90,7 @@ I like to write just about anything for the JVM.
 I have used C++ for a while.
 
 I started in 2016 with competitive programming in mind,
-though I thankfully stayed away from the various infamous bad practices associated with this field
+though I quickly gravitated toward the usage of C++ in systems programming,
 and have since become quite experienced with modern C++ practices.
 
 While I work on Linux as much as possible, I tend to prefer cross-platform
@@ -144,9 +147,9 @@ I like to use C# to write cloud-based web applications (thanks, Azure).
         ),
         _small = true,
         _text = """
-As I usually work on Arch Linux, I have had quite a while to become familiar with core POSIX utilities
+As I usually work on Unix operating systems, I have had quite a while to become familiar with core POSIX utilities
 and other useful tools.
-However, I have also had experience using Windows and macOS for both casual and professional purposes.
+However, I have also had experience using Windows for both casual and professional purposes.
 
 I am relatively comfortable using Git for version control.
         """.trimIndent()
